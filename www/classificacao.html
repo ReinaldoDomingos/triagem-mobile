@@ -40,7 +40,7 @@
                                     <div id="sintomas_box" class="bts">
                                         <button class="btn btn-light doenca" routerLink="/sintomas/" @click="prev"  v-if="minItem > 2 && !sintoma">⇦</button>
                                         <button v-for="(doenca,index) in filtrado" v-if="doencas && doencas.length > 0 && index <= maxItem && index>= minItem-1" type="button" class="btn btn-light doenca" routerLink="/sintomas/" v-bind:index=index @click="selecionarSintoma(index,doenca)">{{doenca}}</button>
-                                        <button class="btn btn-light doenca" @click="prox" routerLink="/sintomas/"  v-if="maxItem < 51 && !sintoma">➱</button>
+                                        <button class="btn btn-light doenca" @click="prox" routerLink="/sintomas/"  v-if="maxItem < 50 && !sintoma">➱</button>
                                     </div>
                                     <div class="botoes">                  
                                         <div class="row dcancelar">
