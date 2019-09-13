@@ -657,10 +657,59 @@ var lista_sintomas = [
         ]
     },
     {//Dor Lombar
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Choque"
+        ],
+        "laranja": [
+            "Déficit Neurológico Agudo",
+            "Mecanismo de Trauma Significativo",
+            "Criança Quente",
+            "Adulto Muito Quente",
+            "Dor Abdominal",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "Déficit Neurológico Novo",
+            "Truama direto no dorso",
+            "Adulto Quente",
+            "Cólicas",
+            "História discordante",
+            "Dor Moderada"
+        ],
+        "verde": [
+            "Dor Leve Recentemente",
+            "Evento Recente"
+        ]
 
     },
     {//Dor Tetsicular
-
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Choque"
+        ],
+        "laranja": [
+            "Idade < 25 anos",
+            "Gagrena de escroto",
+            "Adulto Muito Quente",
+            "Criança Quente",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "Celulite de escroto",
+            "Cólicas",
+            "Vômitos Persistentes",
+            "Adulto Quente",
+            "Dor Moderada"
+        ],
+        "verde": [
+            "Trauma de escroto",
+            "Vômitos",
+            "Dor Leve Recentemente",
+            "Evento Recente"
+        ]
     },
     {//Dor torácica
         "vermelho": [
@@ -745,19 +794,215 @@ var lista_sintomas = [
         ]
     },
     {//Exposição a Agente Químico
-
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Estridor",
+            "Respiração Inadequada",
+            "Choque",
+            "Convulsionando",
+            "Lesão ocular química aguda"
+        ],
+        "laranja": [
+            "Mortalidade alta",
+            "Edema Facial",
+            "Edema de Língua",
+            "Alteração Súbita Da Consciência",
+            "Risco de contaminação persistente",
+            "Sat O2 Muito Baixa",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "Mortalidade moderada",
+            "Erupção ou Vesículas Disseminadas",
+            "História discordante",
+            "Sat O2 Baixa",
+            "Dor Moderada"
+        ],
+        "verde": [
+            "Dor Leve Recente",
+            "Evento Recente"
+        ]
     },
     {//Feridas
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Hemorragia Exanguinante",
+            "Choque"
+        ],
+        "laranja": [
+            "Hemorragia Maior Incontrolável",
+            "Comprometimento vascular distal",
+            "Alteração Súbita Da Consciência",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "História discordante",
+            "Hemorragia Menor Incontrolável",
+            "Déficit Neurológico Novo",
+            "Dor Moderada"
+        ],
+        "verde": [
+            "Infecção local",
+            "Inflamação local",
+            "Evento Recente",
+            "Dor Leve Recente"
+        ]
     },
     {//Gravidez
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Hemorragia Exanguinante",
+            "Choque",
+            "Apresentação de partes fetais",
+            "Prolapso de cordão umbilical",
+            "Convulsionando"
+        ],
+        "laranja": [
+            "Trabalho de parto",
+            "Alteração Súbita Da Consciência",
+            "História de Convulsão",
+            "Sangramento Vaginal Intenso",
+            "Sangramento Vaginal, > 20 semanas gravidez",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "Dor abdominal",
+            "Pressão arterial elevada",
+            "História de trauma",
+            "História discordante",
+            "Dor Irradiada para ombro",
+            "Sangramento Vaginal",
+            "Dor Moderada"
+        ],
+        "verde": [
+            "Febril",
+            "Dor Leve Recente"
+        ]
     },
     {//Hemorragia Digestiva
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Hemorragia Exanguinante",
+            "Choque"
+        ],
+        "laranja": [
+            "Vômito de sangue",
+            "Evacuação de sangue vivo ou escurecido",
+            "História de Hemorragia digestiva importante",
+            "Alteração Súbita Da Consciência",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "Fezes pretas ou em groselha",
+            "História aguda de vômito de sangue",
+            "Distúrbio da coagulação",
+            "Vômitos persistentes",
+            "Dor Moderada"
+        ],
+        "verde": [
+            "Vômitos",
+            "Dor Leve Recente",
+            "Evento Recente"
+        ]
     },
-    {//Hemorragia Digestiva
+    {//Infecções Locais e Abcessos
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Choque"
+        ],
+        "laranja": [
+            "Comprometimento vascular distal",
+            "Enfisema subcutâneo",
+            "Criança quente",
+            "Adulto muito quente",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "Dor ao movimento articular",
+            "Articulação quente",
+            "Adulto quente",
+            "Dor Moderada"
+        ],
+        "verde": [
+            "Febril",
+            "Evento Recente",
+            "Dor Leve Recente"
+        ]
     },
-    {//Hemorragia Digestiva
+    {//Mal Estar em Adulto
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Choque",
+            "Hipoglicemia",
+            "Convulsionando"
+        ],
+        "laranja": [
+            "Alteração Súbita Da Consciência",
+            "Hemoptise",
+            "Pulso anormal",
+            "Sinais de meningismo",
+            "Déficit neurológico agudo",
+            "Risco especial de Infecção",
+            "Erupção cutânea fixa",
+            "Púrpura",
+            "Adulto muito quente",
+            "Hipotermia",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "Inicio Súbito",
+            "História de hemoptise",
+            "História viagem recente",
+            "Déficit neurológico Novo",
+            "Imunopressão conhecida",
+            "Distúrbio de coagulação",
+            "Erupção ou vesículas disseminadas",
+            "Adulto quente",
+            "Dor Moderada"
+        ],
+        "verde": [
+            "Febril",
+            "Dor Leve Recente",
+            "Evento Recente"
+        ]
     },
-    {//Hemorragia Digestiva
+    {//Mal Estar em Criança
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Choque",
+            "Hipoglicemia",
+            "Convulsionando",
+            "Criança não reativa"
+        ],
+        "laranja": [
+            "Sinais de Dor Intensa",
+            "Resposta a dor ou a voz apenas",
+            "Não reage aos pais",
+            "Sinais de meningismo",
+            "Erupção cutânea fixa",
+            "Púrpura",
+            "Criança quente",
+            "Hipotermia"
+        ],
+        "amarelo": [
+            "Sinais de Dor Moderada",
+            "História discordante",
+            "Sinais de Desidratação",
+            "Sem Urinar",
+            "Não se alimenta"
+        ],
+        "verde": [
+            "Sinais de Dor Leve Recente",
+            "Febril",
+            "Comportamento atípico",
+            "Evento Recente"
+        ]
     },
     {//Mordeduras e Picadas
         "vermelho": [
@@ -795,7 +1040,32 @@ var lista_sintomas = [
         ]
     },
     {//Overdose e Envenenamento
-        
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Choque",
+            "Criança não reativa",
+            "Hipoglicemia",
+            "Convulsionando",
+        ],
+        "laranja": [
+            "Pulso anormal",
+            "Mortalidade alta",
+            "Alteração Súbita Da Consciência",
+            "Alto risco de nova autoagressão",
+            "Sat O2 Muito Baixa"
+        ],
+        "amarelo": [
+            "Mortalidade Moderada",
+            "Risco moderado de nova autoagressão",
+            "História psiquiátrica importante",
+            "História de Inconsciência",
+            "Agitação psicomotora",
+            "História discordante",
+            "Sat O2 Baixa"
+        ],
+        "verde": [
+        ]
     },
     {//Pais Preocupados
         "vermelho": [
@@ -831,25 +1101,208 @@ var lista_sintomas = [
         ]
     },
     {//Palpitações
-        
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Choque"
+        ],
+        "laranja": [
+            "Dor precordial ou cardíaca",
+            "Dispinéia aguda",
+            "História de Overdose ou Envenenamento",
+            "Pulso anormal",
+            "Alteração Súbita Da Consciência",
+            "Criança Quente",
+            "Adulto Muito Quente"
+        ],
+        "amarelo": [
+            "Palpitação atual",
+            "História de Inconsciência",
+            "História cardíaca importante",
+            "Adulto Quente"
+        ],
+        "verde": [
+            "Evento recente"
+        ]
     },
-    {//Palpitações
-        
+    {//Problemas Dentários
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Choque"
+        ],
+        "laranja": [
+            "Hemorragia maior incontrolável",
+            "Criança Quente",
+            "Adulto Muito Quente",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "Hemorragia menor incontrolável",
+            "Avulsão dentária aguda",
+            "Distúrbio de coagulação",
+            "História discordante",
+            "Adulto Quente",
+            "Dor Moderada"
+        ],
+        "verde": [
+            "Febril",
+            "Edema Facial",
+            "Dor leve recente",
+            "Evento recente"
+        ]
     },
-    {//Palpitações
-        
+    {//Problemas em Extremidades
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Hemorragia Exanguinante",
+            "Choque"
+        ],
+        "laranja": [
+            "Dispinéia aguda",
+            "Pele critica",
+            "Comportamento vascular distal",
+            "Hemorragia maior incontrolável",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "Dor pleurítica",
+            "Deformidade grosseira",
+            "Fratura exposta",
+            "Hemorragia menor incontrolável",
+            "Déficit Neurológico Novo",
+            "Distúrbio de coagulação",
+            "História discordante",
+            "Adulto Quente",
+            "Dor Moderada"
+        ],
+        "verde": [
+            "Febril",
+            "Edema",
+            "Dor leve recente",
+            "Evento recente"
+        ]
     },
-    {//Palpitações
-        
+    {//Problemas em Face
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Hemorragia Exanguinante",
+            "Choque"
+        ],
+        "laranja": [
+            "Alteração Súbita Da Consciência",
+            "Hemorragia maior incontrolável",
+            "Criança Quente",
+            "Adulto Muito Quente",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "Deformidade grosseira",
+            "Distúrbio de coagulação",
+            "Redução recente da acuidade visual",
+            "Hemorragia menor incontrolável",
+            "História de inconsciência",
+            "Avulaçãp dentária aguda",
+            "História discordante",
+            "Adulto Quente",
+            "Dor Moderada"
+        ],
+        "verde": [
+            "Febril",
+            "Diplopia",
+            "Sensibilidade na face alterada",
+            "Inchaço na face",
+            "Olho vermelho",
+            "Dor leve recente",
+            "Evento recente"
+        ]
     },
-    {//Palpitações
-        
+    {//Problemas em Olhos
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Choque",
+            "Lesão ocular química aguda"
+        ],
+        "laranja": [
+            "Trauma ocular prenetante",
+            "Perda total da visão aguda",
+            "Adulto Muito Quente",
+            "Criança Quente",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "Redução recente da acuidade visual",
+            "História discordante",
+            "Adulto Quente",
+            "Dor Moderada"
+        ],
+        "verde": [
+            "Olho vermelho",
+            "Sensação de corpo estranho",
+            "Diplopia",
+            "Dor leve recente",
+            "Evento recente"
+        ]
     },
-    {//Palpitações
-        
+    {//Problemas em Ouvidos
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Choque"
+        ],
+        "laranja": [
+            "Alteração Súbita Da Consciência",
+            "Hemorragia maior incontrolável",
+            "Criança Quente",
+            "Adulto Muito Quente",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "Hemorragia menor incontrolável",
+            "História de trauma cranioencefálico",
+            "Vômitos persistentes",
+            "História discordantes",
+            "Adulto Quente",
+            "Dor Moderada"
+        ],
+        "verde": [
+            "Perda recente de audição",
+            "Hematoma de orelha",
+            "Vertigem",
+            "Dor leve recente",
+            "Evento recente"
+        ]
     },
-    {//Palpitações
-        
+    {//Problemas Urinários
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Hemorragia Exanguinante",
+            "Choque"
+        ],
+        "laranja": [
+            "Priaprismo",
+            "Adulto Muito Quente",
+            "Criança Quente",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "Cólicas",
+            "Hematúria franca",
+            "Retenção urinária",
+            "Vômitos persistentes",
+            "Adulto Quente",
+            "Dor Moderada"
+        ],
+        "verde": [
+            "Vômito",
+            "Disúria",
+            "Dor leve recente",
+            "Evento recente"
+        ]
     },
     {//Quedas
         "vermelho": [
@@ -887,13 +1340,66 @@ var lista_sintomas = [
         ]
     },
     {//Queimaduras
-        
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Estridor",
+            "Choque",
+            "Criança Não Reativa"
+        ],
+        "laranja": [
+            "Edema facial",
+            "Lesão por inalação",
+            "Dispnéia aguda",
+            "Mecanismo de trauma significativo",
+            "Alteração Súbita da Consciência",
+            "Sat 02 muito baixa",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "Sat 02 baixa",
+            "Inalação de fumaça",
+            "História Discordante",
+            "Queimadura elétrica",
+            "Queimadura química",
+            "Dor Moderada"
+        ],
+        "verde": [
+            "Inflamação local",
+            "Infecção local",
+            "Dor Leve Recente",
+            "Evento Recente"
+        ]
     },
-    {//Queimaduras
-        
+    {//Sangramento Vaginal
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Hemorragia Exanguinante",
+            "Choque"
+        ],
+        "laranja": [
+            "Alteração Súbita da Consciência",
+            "Sangramento vaginal, > 20 semanas de gravidez",
+            "Sangramento vaginal intenso",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "Dor abdominal",
+            "Dor Irradiada para ombro",
+            "Trauma vaginal",
+            "Distúrbio de coagulação",
+            "História discordante",
+            "Gravidez possível",
+            "Dor Moderada"
+        ],
+        "verde": [
+            "Dor Leve Recente",
+            "Evento Recente"
+        ]
+
     },
-    
-    {//Trauma Toracoabdominal
+    {//Trauma Cranioencefálico
         "vermelho": [
             "Obstrução de Vias Aéreas",
             "Respiração Inadequada",
@@ -922,6 +1428,60 @@ var lista_sintomas = [
         "verde": [
             "Hematoma de Couro Cabeludo",
             "Vômito",
+            "Dor Leve Recente",
+            "Evento Recente"
+        ]
+    },
+    {//Trauma Maior
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Hemorragia Exanguinante",
+            "Choque",
+            "Criança Não Reativa",
+        ],
+        "laranja": [
+            "Dispinéia aguda",
+            "Hemorragia Maior Incontrolável",
+            "Alteração Súbita da Consciência",
+            "Déficit Neurológico Agudo",
+            "Mecanismo de Trauma Significativo",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "Hemorragia Menor Incontrolável",
+            "História de Inconsciência",
+            "Comorbidade importante",
+            "Distúrbio de Coagulação",
+            "Dor Moderada"
+        ],
+        "verde": [
+        ]
+    },
+    {//Trauma Toracoabdominal
+        "vermelho": [
+            "Obstrução de Vias Aéreas",
+            "Respiração Inadequada",
+            "Hemorragia Exanguinante",
+            "Choque",
+        ],
+        "laranja": [
+            "Dispinéia aguda",
+            "Hemorragia Maior Incontrolável",
+            "Mecanismo de Trauma Significativo",
+            "Evisceração",
+            "Dor Intensa"
+        ],
+        "amarelo": [
+            "Dor pleuritica",
+            "Hemorragia Menor Incontrolável",
+            "Distúrbio de Coagulação",
+            "História Discordante",
+            "Dor Moderada"
+        ],
+        "verde": [
+            "Inflamação local",
+            "Infecção local",
             "Dor Leve Recente",
             "Evento Recente"
         ]
