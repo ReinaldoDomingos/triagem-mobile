@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Triagem</title>
+        <base href="./">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="assets/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="styles.css" rel="stylesheet">
+        <link href="teste.css" rel="stylesheet">
+        <!-- ÍCONES -->
+        <link href="assets/libs/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+        <!-- JQUERY -->
+        <script src="assets/libs/jquery/jquery-3.3.1.min.js"></script>
+        <!-- BOOTSTRAP -->
+        <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+        <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div id="classificacao">
+            <div id="cont" class="row">
+                <div id="imgs" class="col-md-2">
+                    <img class="logos logo-ufms" src="assets/img/ufms.png" alt="">
+                    <img class="logos logo-talentw" src="assets/img/talentw2.png" alt="">
+                </div>
+                <div class="col-md-8">
+                    <div class="vertical-center">
+                        <div class="classificacoes-gerais jumbotron">
+                            <div class="row conteudo">
+                                <paciente-dados></paciente-dados>
+                                <div class=" text-center m-3">                    
+                                </div>
+                                <div class="row">
+                                    <div class="pesquisa input-group col-12 text-center">
+                                        <div class="col-4"></div>
+                                        <input id="btsearch" class="search form-control col-4" placeholder="Pesquisar" v-model="sintoma" v-on:keyup="alterarLista">
+                                        <div class="col-4"></div>
+                                    </div>
+                                    <div id="sintomas_box" class="bts">
+                                        <button class="btn btn-light doenca" routerLink="/sintomas/" @click="prev"  v-if="minItem > 2 && !sintoma">⇦</button>
+                                        <button v-for="(doenca,index) in filtrado" v-if="doencas && doencas.length > 0 && index <= maxItem && index>= minItem-1" type="button" class="btn btn-light doenca" routerLink="/sintomas/" v-bind:index=index @click="selecionarSintoma(index,doenca)">{{doenca}}</button>
+                                        <button class="btn btn-light doenca" @click="prox" routerLink="/sintomas/"  v-if="maxItem < 51 && !sintoma">➱</button>
+                                    </div>
+                                    <div class="botoes">                  
+                                        <div class="row dcancelar">
+                                            <button  type="button" routerLink="/home" @click="voltar" class="btn btn-danger cancelar">Cancelar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="assets/libs/vue/vue.js"></script>
+        <script src="paciente.js"></script>
+        <script src="classificacao.js"></script>
+    </body>
+</html>

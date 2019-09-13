@@ -1,0 +1,32 @@
+#cadastro{
+    overflow: auto;
+    max-height: 50vh;
+    display: none;
+}
+.jumbotron.formulario{
+    background: white;
+    position: sticky;
+}
+.btn-colap{
+    color: black;
+    width: auto;
+    margin: 0 !important;
+}
+.card-header,.card-body,.formulario{
+    padding: 0 !important;
+    overflow-x: hidden;
+}
+#m-cont{
+    display: contents;
+}
+#m-form-senha{
+    padding-top: 2%;
+    position: unset;
+    overflow: unset;
+}
+#lbpassword{
+    display: inherit;
+}
+.botoes{
+    display: none;
+}

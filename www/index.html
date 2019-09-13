@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Triagem</title>
+        <base href="./">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+        <script src="assets/libs/jquery/jquery-3.3.1.min.js"></script>
+        <!-- BOOTSTRAP -->
+        <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div id="cont" class="row">
+            <div class="col-md-2 col-12">
+                <img class="logos logo-ufms" src="assets/img/ufms.png" alt="">
+                <img class="logos logo-talentw" src="assets/img/talentw2.png" alt="">
+            </div>
+            <div class="col-md-8">
+                <div class="col-md-2">
+                    <h1 class="text-light text text-center" style="font-size: xx-large;">Simulação Triagem</h1>
+                </div>
+                <div class="vertical-center">
+                    <button id="btInicial" onclick="iniciar()" routerLink="/cadastro" type="button" class="btn btn-info" aria-label="Left Align">
+                        <span class="oi oi-plus"></span> Iniciar Atendimento
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

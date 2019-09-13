@@ -1,0 +1,37 @@
+body{
+	background: #e9ecef !important;	
+}
+#imgs,hr{
+	display: none;
+}
+#app{
+	height: 100vh;
+	background-color: #e9ecef;
+}
+#cont{
+	max-width: 100% !important;
+	width: 100%;
+	margin: 0;
+	height: 100vh;
+}
+#box{
+	height: 100vh;
+	padding: 0 !important;
+}
+.sintoma{
+	width: 31% !important;
+	margin: 1% !important;
+	height: auto;	
+}
+.vertical-center,#cont2{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.bts-footer,.paciente,.paciente-sintoma{
+	margin: 1% !important;
+	margin-bottom: 0 !important;
+}
+.paciente{
+	padding: 0% !important;
+	text-align: center;
+}

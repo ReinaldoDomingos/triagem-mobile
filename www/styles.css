@@ -1,0 +1,324 @@
+.bg-laranja {
+    background: orange !important;
+}
+.resumo-gravidade{
+    text-transform: uppercase;
+    font-weight: bold !important;   
+}
+
+#password{
+    -webkit-text-security: disc;
+}
+
+.bts_modal{
+    display: none;
+}
+
+h2{
+    padding-top: 2%;
+}
+#bts_modal{
+    margin: 1%;
+}
+#bts_modal button{
+    margin: 1%;
+}
+#btsearch{
+    padding-right: unset;
+    margin: 1%;
+    border-radius: 10px;
+    text-align: center;
+}
+#btcollapse{
+    background-color: #d4d4d4;
+    margin: 3% !important;
+}
+#main{
+    overflow: auto;
+    max-height: 80%;
+    -webkit-overflow-scrolling:touch;
+    overflow-scrolling:touch;
+}
+.espaco{
+    width: 100%;
+    height: 50px;              
+}
+.botoes{
+    position: fixed;
+    bottom: 1%;
+    padding-left: 3%;
+    z-index: 100;
+}
+
+.listaSintomas{
+    max-height: 70vh;
+    overflow: auto;
+}
+#form-cad{
+    padding: 0px !important;
+    padding-left: 10px !important;
+    margin-left: 0 !important;
+    overflow: hidden;
+}
+
+*{
+    background: transparent;
+}
+.box{
+    margin-bottom: 2% !important;
+}
+
+.paciente{
+    text-align: center;
+}
+#sintomas_box{
+    width: 100% !important;
+    padding: 0 !important;
+    height: 100vh;
+}
+.conteudo-sintomas{
+    height: auto; 
+}
+form{
+    width:95%;
+    max-width:95%;
+    margin-left:2.5%;
+    overflow: auto;
+}
+
+.bt-modal{
+    background: lightgray;
+}
+.nome-sintoma-geral{
+    font-weight: bold !important;
+}
+.bg-yellow{
+    background-color: #ffea00 !important;
+}
+
+.doenca{
+    float: left;
+    margin: 1%;
+    margin-bottom: 1% !important;
+    width: 48%;
+    height: 45px;
+    white-space: normal !important;
+}
+.sintoma{
+    height: 70px;    
+    margin: 1%;
+    width: 48% !important;
+}
+#cont{
+    margin:0;
+    max-width: 95% !important;
+    min-width: 95% !important;
+    margin: 2.5%;
+}
+.pesquisa,.cancelar{
+    max-width: 94% !important;    
+}
+@media  screen and (max-width: 570px) {
+    form{
+        height: auto !important;
+    }
+    *{        
+        margin-bottom: 0 !important;
+    }
+    input{
+        padding-bottom: 0 !important;
+    }
+}
+
+.pesquisa{
+    max-width: 95%; 
+}
+.cancelar{
+    height: auto;
+    width: auto;
+    margin: 3% !important;
+    margin-right: 25% !important;
+}
+.dcancelar{
+    max-width: 90% !important;    
+    margin: 5% !important;
+    width: 200px;
+}
+.bts{
+    max-width:90.25%;
+    max-width:90.25%;
+    margin-left:4.75%;
+    overflow: auto;
+    max-height: 60vh;
+}
+.col-md-8{
+    padding:1% !important;
+    height:90vh;
+}
+
+.classificacoes-gerais{
+    top: 0%;
+    position: absolute;
+}
+#app{
+    overflow: hidden;
+}
+.search{
+    padding: 0
+
+}
+.pesquisa{
+    float: right;
+    font-size: 14.5px;
+}
+.pesquisa span{
+    margin-left: auto;
+}
+form{
+    width: -webkit-fill-available;
+    position: absolute;
+    top: 1%;
+    width: 100%;
+}
+.titulo{
+    font-size: medium !important;
+    text-align: center;
+}
+.dados-paciente{
+    width: -webkit-fill-available;
+} 
+
+#btInicial {
+    height: 50vh;
+    width: 50vh;
+    border-radius: 50%;
+    font-size: 22px!important;
+    margin: 0 auto;
+    outline: 0!important;
+    border-radius: 50%;
+    margin-bottom: 40% !important;
+}
+
+body {
+    height: 80%;
+    width: 100%;
+    background-image: url('assets/img/medico3.jpg') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-clip: padding-box;
+    overflow: hidden;
+}
+
+.vertical-center {
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: 0 !important;
+    margin-top: 1% !important;
+}
+
+button, p {
+    font-size: 14.5px!important;
+}
+
+button {
+    margin-bottom: 10px!important;
+}
+
+.jumbotron {
+    padding: 1rem 2rem!important;
+    padding-bottom: 80px !important;
+}
+
+h2 {
+    font-size: 40px!important;
+}
+
+.logos {
+    margin-top: 10px;
+}
+
+.logo-ufms {
+    float: left;
+    margin-left: 10px;
+    width: 50%;
+    height: 60%;
+}
+
+.logo-talentw {
+    width: 40%;
+    float: right;
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+@media only screen  and (min-width: 700px) {
+    h1{
+        font-size: -webkit-xxx-large !important;
+        width: max-content;
+        margin-left: 30vh;
+    }
+    #btInicial{
+        height: 50vh;
+        width: 50vh;
+        border-radius: 50%;
+        font-size: 22px!important;
+        margin: 0 auto;
+        outline: 0!important;
+        border-radius: 50%;
+        margin-bottom: 40% !important;
+        margin-top: 5%;
+    }
+    .logo-ufms{
+        position: fixed;
+        float: left;
+        margin-left: 10px;
+        width: 200px;
+        height: auto;
+    }
+    .logo-talentw{
+        position: fixed;
+        width: 200px;
+        right: 0;
+        margin-right: 5%;
+    }
+    #main {
+        margin-left: 30vh;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+    }
+    .doenca {
+        float: left;
+        margin: 0.5% !important;
+        width: 49%;
+        height: 45px;
+        white-space: normal !important;
+    }
+    #box{
+        margin: 40%;
+        margin-top: 5%;
+    }
+    .pergunta{
+        width: -webkit-fill-available;
+    }
+    .botoes{
+        position: fixed;
+        bottom: 17%;
+        padding-left: 0%;
+        z-index: 100;
+    }
+    .cancelar{
+        position: fixed;
+        margin-left: 4% !important;
+    }
+    .btn-sim, .btn-nao{
+        right: 30%;        
+        position: fixed;
+    }
+    .btn-sim{
+        right: 34%;        
+    }
+}
