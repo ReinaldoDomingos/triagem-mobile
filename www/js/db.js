@@ -1,4 +1,5 @@
-var db = null, consultas= null;
+var db = null, consultas= undefined;
+var consultas_processadas = false
 db = window.openDatabase("triagem", "1.0", "Triagem DB", 1000000);
 db.transaction(populateDB, errorCB, successCB);
 
@@ -46,7 +47,8 @@ function queryDB(tx) {
 function querySuccess(tx, results) {
     var len = results.rows.length;
     var tipoReg = "";
-    console.log(results.rows)
+    consultas = results.rows
+    listar_registros()
 }
 function queryConsultaDB(tx) {
     tx.executeSql('SELECT * FROM consultas', [], queryConsultaSuccess, errorCB);
@@ -57,6 +59,7 @@ function queryConsultaDB(tx) {
 function queryConsultaSuccess(tx, results) {
     var size = results.rows.length;
     consultas = results.rows; 
+    consultas_processadas= true 
 }
 
 function apagar(id) {

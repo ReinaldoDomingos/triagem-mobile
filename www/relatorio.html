@@ -27,15 +27,12 @@
             </div>
             <div id="main" class="col-12 col-sm-12 col-md-8">
                 <div id="scroller" class="row vertical-center">
-                    <div class="row" id="button">
+                    <div class="row" id="button" v-show="meses">
                         <div v-for="(mes,index) in meses" v-if="mes.dias.length"  class="row" v-bind:key="index" style="width: -webkit-fill-available;" v-model="messes">
                             <div class="card">
                                 <div class="card-header col-12" id="headingOne">
                                     <button-container v-bind:titulo="mes.nome" v-bind:chave="mes.id" filho="false" icone="true" data-toggle="collapse"  aria-expanded="true"  aria-controls="collapseOne">                     
                                     </button-container>
-
-
-
 
                                     <div  class="collapse show dias" aria-labelledby="headingOne" data-parent="#accordionExample">
                                         <div class="card-body">
@@ -55,7 +52,7 @@
     <script src="assets/libs/vue/vue.js"></script>                      
     <script src="script.js"></script>
     <script src="relatorio.js"></script>
-    <script src="js/button-container.js"></script>    
+    <!-- <script src="js/button-container.js"></script>     -->
     <script src="cordova.js"></script>
     <script src="js/index.js"></script>  
 </body>

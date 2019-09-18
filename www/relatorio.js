@@ -1,15 +1,17 @@
-var cadastro = new Vue({
-	el: '#app',
-	data:{
-		meses: {
-			
-			janeiro:{
-				id:1,
-				nome: 'Janeiro',
-				dias: [
-				10,20
-				]
-			},
+function listar_registros(){
+	var cadastro = new Vue({
+		el: '#app',
+		data:{
+			meses: 
+			{
+
+				janeiro:{
+					id:1,
+					nome: 'Janeiro',
+					dias: [
+					10,20
+					]
+				},
 
 			// form: {
 			// 	data: '',
@@ -23,26 +25,46 @@ var cadastro = new Vue({
 	},
 	mounted(){
 		$('.collapse').collapse('hide');
-		console.log(this.meses)
+		// console.log(this.meses)
 	},
 	beforeCreate(){
 		var db = window.openDatabase("triagem", "1.0", "Triagem DB", 1000000);
 		console.log(db)
-		try {
-			db.transaction(queryConsultaDB, errorCB);
-			console.log(consultas)
-		} catch (e) {
-			console.log(e)
-		}
+
+		db.transaction(queryConsultaDB, errorCB);
+
+		Promise.resolve(consultas).then(function(value) {
+
+			console.log(consultas); 
+		}, function(value) {
+			console.log("Erro")
+		});
+
+
+		var original = Promise.resolve(consultas_processadas);
+		var cast = Promise.resolve(original);
+		cast.then(function(v) {
+			console.log(consultas); 
+		});
+
+		
 	},
 	methods: {
 		abrirCollapse: function(){
 			console.log("ok")
 		},
+		watch:{
+			listar: function(){
+				console.log(consultas)
+			}
 
+		}
 	}
 });
-
+	var imported = document.createElement('script');
+	imported.src = 'js/button-container.js';
+	document.head.appendChild(imported); 
+}
 
 // // nome_mes: ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"]	
 // 		meses: {
