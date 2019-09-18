@@ -3,11 +3,11 @@ $(function () {
     var largura = screen.width
     if (altura >= 570) {
         $('#app').hide()
-                .show();
+        .show();
     } else {
         $('#app').hide()
-                .css('min-height', altura)
-                .show();
+        .css('min-height', altura)
+        .show();
     }
 })
 
@@ -48,6 +48,10 @@ function iniciar() {
 
 }
 function cadastrar() {
+    var data_hora = $('input[type="datetime-local"]').val()
+    var dia = data_hora.substring(8,10)
+    var mes = data_hora.substring(5,7)
+    var ano = data_hora.substring(0,4)
     var paciente = {
         'nome': $('#cadastro-nome-paciente').val(),
         'sexo': $('#cadastro-sexo-paciente').val(),
@@ -67,10 +71,14 @@ function cadastrar() {
         'alergia': $('#cadastro-alergia-paciente').prop('checked'),
         'medicamentos': $('#cadastro-medicamento-paciente').val(),
         'queixa': $('#cadastro-queixa-paciente').val(),
-        'datahora_inicio': $('input[type="datetime-local"]').val()
+        'datahora_inicio': $('input[type="datetime-local"]').val(),
+        'dia': dia,
+        'mes': mes,
+        'ano': ano
     }
     localStorage.setItem('paciente-dados', JSON.stringify(paciente))
-    location.href = 'classificacao.html'
+    if(location.href.indexOf('cadastro.html')!=-1)
+        location.href = 'classificacao.html'
 }
 
 function loadCSS(url) {

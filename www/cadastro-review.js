@@ -11,16 +11,17 @@ function fecharModal() {
     $("#myModal1").modal('hide');
 }
 function salvar(e) {
-    if ($('#m-aceitar-termo-paciente').prop('checked')) {
-        if ($('#password').val().length >= 4) {
+    // if ($('#m-aceitar-termo-paciente').prop('checked')) {
+    //     if ($('#password').val().length >= 4) {
             fecharModal()
+            db.transaction(insertDB, errorCB, successCB);
             abrirModal(2)
-        } else {
-            alert("Peça a um(a) enfermeiro(a) digitar a senha!")
-        }
-    } else {
-        alert("É necessario aceitar os termos e condições de uso!")
-    }
+    //     } else {
+    //         alert("Peça a um(a) enfermeiro(a) digitar a senha!")
+    //     }
+    // } else {
+    //     alert("É necessario aceitar os termos e condições de uso!")
+    // }
 }
 
 function salvarAlteracoes() {

@@ -195,10 +195,6 @@ Vue.component('cadastro',{
    <button @click="voltar" type="button" routerLink="/home" class="btn btn-danger">Cancelar</button>
    <button onsubmit="cadastrar()" type="submit" class="btn btn-success">Próximo</button>
    </div>
-   <div id="bts_modal"  class="row">
-   <button @click="salvarAlteracoes" type="button" routerLink="/home" class="btn btn-danger">Fechar Resumo</button>
-   <button @click="salvarAlteracoes" type="button" class="btn btn-success">Salvar Alterações</button>
-   </div>
    </form>`,
    data(){
       return {
@@ -222,6 +218,7 @@ Vue.component('cadastro',{
    mounted: function() {      
       if(location.href.indexOf('#review')!=-1){
          var paciente = JSON.parse(localStorage.getItem('paciente-dados'))
+         console.log(paciente.nome)
          $('#cadastro-nome-paciente').val(paciente.nome)
          $('#cadastro-sexo-paciente').val(paciente.sexo)
          $('#cadastro-idade-paciente').val(paciente.idade)

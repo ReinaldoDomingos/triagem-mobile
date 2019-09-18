@@ -1,0 +1,21 @@
+#main{
+	overflow-x: hidden;
+}
+#main #button{
+	top: 10%;
+	position: absolute;
+	width: -webkit-fill-available;
+}
+#headingOne{
+	padding: 0;
+}
+#headingOne .col-10{
+	padding: 0;
+}
+.card{
+	width: 80%;
+	margin-left: 10%;
+}
+.cinza button{
+	background: #d6d8d9;
+}

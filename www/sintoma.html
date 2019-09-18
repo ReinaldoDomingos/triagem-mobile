@@ -1,213 +1,215 @@
 <!doctype html>
 <html lang="pt-br">
-    <head>
-        <meta charset="utf-8">
-        <title>Triagem</title>
-        <base href="./">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="styles.css" rel="stylesheet">
-        <link href="teste.css" rel="stylesheet">
-        <link href="cadastro-review.css" rel="stylesheet">
-        <!-- ÍCONES -->
-        <link href="assets/libs/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
-        <!-- JQUERY -->
-        <script src="assets/libs/jquery/jquery-3.3.1.min.js"></script>
-        <!-- BOOTSTRAP -->
-        <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
-        <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <div id="app">
-            <div id="cont" class="row">
-                <div id="imgs" class="col-12 col-md-2">
-                    <img class="logos logo-ufms" src="assets/img/ufms.jpg" alt="">
-                    <img class="logos logo-talentw" src="assets/img/talentw2.png" alt="">
-                </div>
-                <div id="cont2" class="col-md-8">
-                    <div class="vertical-center">
-                        <div id="sintomas_box" class="conteudo-sintomas jumbotron">
-                            <div id="box" class="col-md-8">
-                                <paciente-dados></paciente-dados>                
-                                <div class="paciente-sintoma alert alert-dark"  role="alert" 
-                                     v-bind:class="{
-                                     'bg-danger':estadoAtual == 'vermelho',
-                                     'bg-laranja':estadoAtual == 'laranja',
-                                     'bg-yellow':estadoAtual == 'amarelo',
-                                     'bg-success':estadoAtual == 'verde',
-                                     'bg-primary':estadoAtual == 'azul'}"> 
-                                    <p class="nome-sintoma-geral lead text-light text-center">
-                                    <b-spinner small label="Small Spinner"></b-spinner>
-                                    {{sintomaGeral}}
-                                    </p>
-                                </div>
-                                <!-- ######### -->
-                                <!-- VERMELHOS -->
-                                <!-- ######### -->
+<head>
+    <meta charset="utf-8">
+    <title>Triagem</title>
+    <base href="./">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" rel="stylesheet">
+    <link href="teste.css" rel="stylesheet">
+    <link href="cadastro-review.css" rel="stylesheet">
+    <!-- ÍCONES -->
+    <link href="assets/libs/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+    <!-- JQUERY -->
+    <script src="assets/libs/jquery/jquery-3.3.1.min.js"></script>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+    <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="cont" class="row">
+            <div id="imgs" class="col-12 col-md-2">
+                <img class="logos logo-ufms" src="assets/img/ufms.jpg" alt="">
+                <img class="logos logo-talentw" src="assets/img/talentw2.png" alt="">
+            </div>
+            <div id="cont2" class="col-md-8">
+                <div class="vertical-center">
+                    <div id="sintomas_box" class="conteudo-sintomas jumbotron">
+                        <div id="box" class="col-md-8">
+                            <paciente-dados></paciente-dados>                
+                            <div class="paciente-sintoma alert alert-dark"  role="alert" 
+                            v-bind:class="{
+                            'bg-danger':estadoAtual == 'vermelho',
+                            'bg-laranja':estadoAtual == 'laranja',
+                            'bg-yellow':estadoAtual == 'amarelo',
+                            'bg-success':estadoAtual == 'verde',
+                            'bg-primary':estadoAtual == 'azul'}"> 
+                            <p class="nome-sintoma-geral lead text-light text-center">
+                                <b-spinner small label="Small Spinner"></b-spinner>
+                                {{sintomaGeral}}
+                            </p>
+                        </div>
+                        <!-- ######### -->
+                        <!-- VERMELHOS -->
+                        <!-- ######### -->
 
-                                <div  v-if="estadoAtual=='vermelho'" class="sintomasVermelhos listaSintomas">
-                                    <div class="sint" v-for="(sintoma,i) in sintomas.vermelho">
-                                        <button
-                                            @click="possui()" class=" btn btn-light doenca sintoma">{{ sintoma }}</button>
+                        <div  v-if="estadoAtual=='vermelho'" class="sintomasVermelhos listaSintomas">
+                            <div class="sint" v-for="(sintoma,i) in sintomas.vermelho">
+                                <button
+                                @click="possui()" class=" btn btn-light doenca sintoma">{{ sintoma }}</button>
+                            </div>
+                        </div>
+                        <!-- ######### -->
+                        <!-- LARANJA -->
+                        <!-- ######### -->
+                        <div v-if="estadoAtual=='laranja' && sintomas.laranja && sintomas.laranja.length >0" class="sintomasLaranja listaSintomas">
+                            <div v-for="(sintoma,i) in sintomas.laranja">
+                                <button 
+                                @click="possui()" class=" btn btn-light doenca sintoma">{{ sintoma }}</button>
+                            </div>
+                        </div>
+                        <!-- ######### -->
+                        <!-- AMARELO -->
+                        <!-- ######### -->
+                        <div  v-if="estadoAtual=='amarelo' " class="sintomasAmarelos listaSintomas">
+                            <div v-for="(sintoma,i) in sintomas.amarelo">
+                                <button 
+                                @click="possui()" class=" btn btn-light doenca sintoma">{{ sintoma }}</button>
+                            </div>
+                        </div>
+                        <!-- ######### -->
+                        <!-- VERDE -->
+                        <!-- ######### -->
+                        <div  v-if="estadoAtual=='verde'" class="sintomasVerdes listaSintomas">
+                            <div v-for="(sintoma,i) in sintomas.verde">           
+                                <button 
+                                @click="possui()" class=" btn btn-light doenca sintoma">{{ sintoma }}</button>
+                            </div>
+                        </div>
+                        <div class="clearfix "></div>
+                        <div v-if="estadoAtual=='azul'" class="listaSintomas">
+                            <p class="lead text-center">A gravidade do usuário não é urgente, sem risco imediato de agravo à saúde</p>
+                        </div>
+                        <div id="myModal1" class="modal" data-backdrop="static">
+                            <div class="modal-dialog modal-dialog-centered ">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title resultado">O estado do paciente é
+                                            <span style="font-weight: bold">{{gravidade}}</span>
+                                        </h4>
                                     </div>
+                                    <div class="modal-body  text-center text-light" v-bind:class="{
+                                    'bg-danger':estadoAtual == 'vermelho',
+                                    'bg-laranja':estadoAtual == 'laranja',
+                                    'bg-yellow':estadoAtual == 'amarelo',
+                                    'bg-success':estadoAtual == 'verde', 
+                                    'bg-primary':estadoAtual == 'azul'}">
+                                    <p class="resumo-gravidade">{{resumoGravidade}}</p>
                                 </div>
-                                <!-- ######### -->
-                                <!-- LARANJA -->
-                                <!-- ######### -->
-                                <div v-if="estadoAtual=='laranja' && sintomas.laranja && sintomas.laranja.length >0" class="sintomasLaranja listaSintomas">
-                                    <div v-for="(sintoma,i) in sintomas.laranja">
-                                        <button 
-                                            @click="possui()" class=" btn btn-light doenca sintoma">{{ sintoma }}</button>
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0 text-center">
+                                            <button id="btcollapse" class="btn btn-colap" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Clique aqui e veja o Resumo da Consulta
+                                            </button>
+                                        </h5>
                                     </div>
-                                </div>
-                                <!-- ######### -->
-                                <!-- AMARELO -->
-                                <!-- ######### -->
-                                <div  v-if="estadoAtual=='amarelo' " class="sintomasAmarelos listaSintomas">
-                                    <div v-for="(sintoma,i) in sintomas.amarelo">
-                                        <button 
-                                            @click="possui()" class=" btn btn-light doenca sintoma">{{ sintoma }}</button>
-                                    </div>
-                                </div>
-                                <!-- ######### -->
-                                <!-- VERDE -->
-                                <!-- ######### -->
-                                <div  v-if="estadoAtual=='verde'" class="sintomasVerdes listaSintomas">
-                                    <div v-for="(sintoma,i) in sintomas.verde">           
-                                        <button 
-                                            @click="possui()" class=" btn btn-light doenca sintoma">{{ sintoma }}</button>
-                                    </div>
-                                </div>
-                                <div class="clearfix "></div>
-                                <div v-if="estadoAtual=='azul'" class="listaSintomas">
-                                    <p class="lead text-center">A gravidade do usuário não é urgente, sem risco imediato de agravo à saúde</p>
-                                </div>
-                                <div id="myModal1" class="modal" data-backdrop="static">
-                                    <div class="modal-dialog modal-dialog-centered ">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title resultado">O estado do paciente é
-                                                    <span style="font-weight: bold">{{gravidade}}</span>
-                                                </h4>
-                                            </div>
-                                            <div class="modal-body  text-center text-light" v-bind:class="{
-                                                 'bg-danger':estadoAtual == 'vermelho',
-                                                 'bg-laranja':estadoAtual == 'laranja',
-                                                 'bg-yellow':estadoAtual == 'amarelo',
-                                                 'bg-success':estadoAtual == 'verde', 
-                                                 'bg-primary':estadoAtual == 'azul'}">
-                                                <p class="resumo-gravidade">{{resumoGravidade}}</p>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-header" id="headingOne">
-                                                    <h5 class="mb-0 text-center">
-                                                        <button id="btcollapse" class="btn btn-colap" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                            Clique aqui e veja o Resumo da Consulta
-                                                        </button>
-                                                    </h5>
-                                                </div>
-                                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                                    <div class="card-body">
-                                                        <div id="cadastro">
-                                                            <cadastro></cadastro>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                            <form id="m-form-senha">
-                                                <div class='col-6 col-sm'>
-                                                    <div class="form-group  mb-3">
-                                                        <div class='input-group date'>
-                                                            <label id="lbpassword" class="" for="password" min=4>Enfermeira(o): <span> Daniela</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class='col-6 col-sm'>
-                                                    <div class="form-group  mb-3">
-                                                        <div class='input-group date'>
-                                                            <br>
-                                                            <input id="password" type='number' placeholder="Senha" size="4" v-mask="'####'" class="form-control" disabled req/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class='col-12 col-sm'>
-                                                    <div class="form-group mb-3">                                  
-                                                        <div class="form-check">
-                                                            <div class="custom-control custom-checkbox">
-                                                                <input type="checkbox" class="custom-control-input" id="m-aceitar-termo-paciente">
-                                                                <label class="custom-control-label" for="m-aceitar-termo-paciente">Aceito os termos e condições de uso da aplicação.</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default bt-modal" onclick="salvar()">Salvar</button>
-                                                    <button type="button" class="btn btn-default bt-modal" data-dismiss="modal">Fechar</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="myModal2" class="modal" data-backdrop="static">
-                                    <div class="modal-dialog modal-dialog-centered ">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title resultado">O estado do paciente é
-                                                    <span style="font-weight: bold">{{gravidade}}</span>
-                                                </h4>
-                                            </div>
-                                            <div class="modal-body  text-center text-light" v-bind:class="{
-                                                 'bg-danger':estadoAtual == 'vermelho',
-                                                 'bg-laranja':estadoAtual == 'laranja',
-                                                 'bg-yellow':estadoAtual == 'amarelo',
-                                                 'bg-success':estadoAtual == 'verde', 
-                                                 'bg-primary':estadoAtual == 'azul'}">
-                                                <p class="resumo-gravidade">{{resumoGravidade}}</p>
-                                            </div>
-                                            <p class="resumo-gravidade text-center">A consulta foi salva com sucesso.</p>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default bt-modal" data-dismiss="modal" onclick="location.href = 'cadastro.html'">Ok</button>
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <div id="cadastro">
+                                                <cadastro></cadastro>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <hr>
-                                <div class="row bts-footer">
-                                    <p v-if="estadoAtual!='azul'" class="lead text-center pergunta">
-                                        O paciente possui algum dos sintomas acima?
-                                    </p>
-                                    <div class="col-md-6">
-                                        <button @click="voltar" class="btn btn-secondary btn-voltar">
-                                            <span class="oi oi-arrow-thick-left"></span>
-                                        </button>
-                                        <div class="row float-right">
-                                            <div class="col-12">
-                                                <button type="button " @click="possui()" class="btn btn-sim text-light" v-if="estadoAtual!='azul'" v-bind:class="{
-                                                        'bg-danger':estadoAtual == 'vermelho',
-                                                        'bg-laranja':estadoAtual == 'laranja',
-                                                        'bg-yellow':estadoAtual == 'amarelo',
-                                                        'bg-success':estadoAtual == 'verde',
-                                                        'bg-primary':estadoAtual == 'azul'}">Sim</button>
-                                                <button type="button " v-if="estadoAtual!=='azul'"  @click="naoPossui() " class="btn btn-secondary  btn-nao">Não</button>
+                                <form id="m-form-senha">
+                                    <div style="display: none;" class='col-6 col-sm'>
+                                        <div class="form-group  mb-3">
+                                            <div class='input-group date'>
+                                                <label id="lbpassword" class="" for="password" min=4>Enfermeira(o): <span> Daniela</span>
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
+                                    <div style="display: none;" class='col-6 col-sm'>
+                                        <div class="form-group  mb-3">
+                                            <div class='input-group date'>
+                                                <br>
+                                                <input id="password" type='number' placeholder="Senha" size="4" v-mask="'####'" class="form-control" disabled req/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="display: none;" class='col-12 col-sm'>
+                                        <div class="form-group mb-3">                                  
+                                            <div class="form-check">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="m-aceitar-termo-paciente">
+                                                    <label class="custom-control-label" for="m-aceitar-termo-paciente">Aceito os termos e condições de uso da aplicação.</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button  type="button" class="btn btn-default bt-modal" onclick="salvar()">Salvar</button>
+                                        <button type="button" class="btn btn-default bt-modal" data-dismiss="modal">Fechar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="myModal2" class="modal" data-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered ">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title resultado">O estado do paciente é
+                                        <span style="font-weight: bold">{{gravidade}}</span>
+                                    </h4>
                                 </div>
+                                <div class="modal-body  text-center text-light" v-bind:class="{
+                                'bg-danger':estadoAtual == 'vermelho',
+                                'bg-laranja':estadoAtual == 'laranja',
+                                'bg-yellow':estadoAtual == 'amarelo',
+                                'bg-success':estadoAtual == 'verde', 
+                                'bg-primary':estadoAtual == 'azul'}">
+                                <p class="resumo-gravidade">{{resumoGravidade}}</p>
+                            </div>
+                            <p class="resumo-gravidade text-center">A consulta foi salva com sucesso.</p>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default bt-modal" data-dismiss="modal" onclick="location.href = 'cadastro.html'">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row bts-footer">
+                    <p v-if="estadoAtual!='azul'" class="lead text-center pergunta">
+                        O paciente possui algum dos sintomas acima?
+                    </p>
+                    <div class="col-md-6">
+                        <button @click="voltar" class="btn btn-secondary btn-voltar">
+                            <span class="oi oi-arrow-thick-left"></span>
+                        </button>
+                        <div class="row float-right">
+                            <div class="col-12">
+                                <button type="button " @click="possui()" class="btn btn-sim text-light" v-if="estadoAtual!='azul'" v-bind:class="{
+                                'bg-danger':estadoAtual == 'vermelho',
+                                'bg-laranja':estadoAtual == 'laranja',
+                                'bg-yellow':estadoAtual == 'amarelo',
+                                'bg-success':estadoAtual == 'verde',
+                                'bg-primary':estadoAtual == 'azul'}">Sim</button>
+                                <button type="button " v-if="estadoAtual!=='azul'"  @click="naoPossui() " class="btn btn-secondary  btn-nao">Não</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="assets/libs/vue/vue.js"></script>
-        <script src="assets/libs/vue-the-mask/vue-the-mask.js"></script>
-        <script src="assets/sintomas.js"></script>
-        <script src="script.js"></script>
-        <script src="paciente.js"></script>
-        <script src="sintoma.js"></script>
-        <script src="cadastro-review.js"></script>
-        <script src="cadastro.js"></script>
-    </body>
+    </div>
+</div>
+</div>
+</div>
+<script src="assets/libs/vue/vue.js"></script>
+<script src="assets/libs/vue-the-mask/vue-the-mask.js"></script>
+<script src="assets/sintomas.js"></script>
+<script src="script.js"></script>
+<script src="paciente.js"></script>
+<script src="sintoma.js"></script>
+<script src="cadastro-review.js"></script>
+<script src="cadastro.js"></script>
+<script src="js/SQLitePlugin.js"></script>
+<script src="js/db.js"></script>
+</body>
 </html>
