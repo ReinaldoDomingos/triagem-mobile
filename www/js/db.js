@@ -60,28 +60,31 @@ function querySuccess(tx, results) {
     }
 
     for (var i = 0; i < results.rows.length; i++) {
-        var mes = Number(results.rows.item(i).mes)
-        consultas[mes-1].dias[consultas[mes-1].dias.length] = results.rows.item(i)
+        var mes = Number(results.rows.item(i).mes) 
+        var qtd = consultas[mes-1].dias.length
+        consultas[mes-1].dias[qtd] = results.rows.item(i)
     }
-
     if(location.href.indexOf('relatorio.html')!=-1)
         listar_registros()
-    else if (location.href.indexOf('registros.html')!=-1){        
+    else if (location.href.indexOf('registros.html')!=-1){     
         var id =  localStorage.getItem('consulta-id')
         var mes = localStorage.getItem('consulta-mes')
-        console.log(id)
-        console.log(mes)
-        if(id & mes){
-            for (var i = 0; i < consultas[mes-1].dias.length; i++) {
-                if(consultas[mes-1].dias[i].id == id){
-                    consulta = consultas[mes-1].dias[i]
-                    break
-                }
-            }
+        console.log(consultas[mes])
+        for (var i = 0; i < consultas[mes].dias.length; i++) {
+            if(consultas[mes].dias[i].id == id){ 
+                consulta = consultas[mes].dias[i]
+                break
+            } 
+        }
+        if(id && mes){
+            console.log('id e mes')
             listar_registro()
-        }else if(mes){
-            consulta = consulta[mes-1].dias[0]
-            listar_registro(consulta[mes-1].dias.length)            
+        }else if(mes){    
+            console.log('mes apenas')
+            mes = Number(mes)            
+            consulta = consultas[mes].dias[0]
+            console.log(consultas[mes].dias.length)            
+            listar_registro(consultas[mes])            
         }
     }
 }

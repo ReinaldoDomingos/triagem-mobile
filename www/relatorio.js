@@ -22,7 +22,7 @@ function listar_registros(){
 		},
 		beforeCreate(){
 			var db = window.openDatabase("triagem", "1.0", "Triagem DB", 1000000);
-			$('.collapse').collapse('hide');
+			// $('.collapse').collapse('hide');
 		},
 		methods: {
 			abrirCollapse: function(){

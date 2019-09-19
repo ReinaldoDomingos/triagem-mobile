@@ -31,10 +31,10 @@
                         <div v-for="(mes,index) in meses" v-if="mes.dias.length"  class="row" v-bind:key="index" style="width: -webkit-fill-available;" v-model="messes">
                             <div class="card">
                                 <div class="card-header col-12" id="headingOne">
-                                    <button-container v-bind:titulo="mes.nome" v-bind:chave="mes.id" filho="false" icone="true" data-toggle="collapse"  aria-expanded="true"  aria-controls="collapseOne">                     
+                                    <button-container v-bind:titulo="mes.nome" v-bind:chave="mes.id" filho="false" icone="true" data-toggle="collapse"  aria-expanded="true"  aria-controls="collapseOne"  v-bind:mess="mes.id">                     
                                     </button-container>
 
-                                    <div  class="collapse show dias" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div   class="collapsing show dias" aria-labelledby="headingOne" data-parent="#accordionExample">
                                         <div class="card-body">
                                             <button-container v-for="dia in mes.dias" class="cinza" filho="true" v-bind:titulo="dia.dia" icone="true" v-bind:id="dia.id" v-bind:mess="dia.mes"></button-container>
                                         </div>
