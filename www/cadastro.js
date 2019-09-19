@@ -218,7 +218,6 @@ Vue.component('cadastro',{
    mounted: function() {      
       if(location.href.indexOf('#review')!=-1){
          var paciente = JSON.parse(localStorage.getItem('paciente-dados'))
-         console.log(paciente.nome)
          $('#cadastro-nome-paciente').val(paciente.nome)
          $('#cadastro-sexo-paciente').val(paciente.sexo)
          $('#cadastro-idade-paciente').val(paciente.idade)

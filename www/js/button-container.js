@@ -20,29 +20,24 @@ Vue.component('button-container',{
 		},
 		mostrarConteudo: function(){
 			var qtd = document.getElementsByClassName('dias').length
-			console.log(this.chave)
-			console.log(this.chave%qtd)
 			var	dia = document.getElementsByClassName('dias')[this.chave%qtd]
-			if(dia.classList.contains('collapsing')){
-				$('.dias').collapse('hide');
-				document.getElementsByClassName('dias')[this.chave%qtd].classList.remove('collapsing');
-				document.getElementsByClassName('dias')[this.chave%qtd].classList.add('collapse');
-				document.getElementsByClassName('dias')[this.chave%qtd].classList.add('show');
+			if(this.chave){
+				if(dia.classList.contains('collapsing')){
+					$('.dias').collapse('hide');
+					document.getElementsByClassName('dias')[this.chave%qtd].classList.remove('collapsing');
+					document.getElementsByClassName('dias')[this.chave%qtd].classList.add('collapse');
+					document.getElementsByClassName('dias')[this.chave%qtd].classList.add('show');
+				}else {
+					document.getElementsByClassName('dias')[this.chave%qtd].classList.remove('collapse');
+					document.getElementsByClassName('dias')[this.chave%qtd].classList.remove('show');
+					document.getElementsByClassName('dias')[this.chave%qtd].classList.add('collapsing');
+				}
 			}else{
-				document.getElementsByClassName('dias')[this.chave%qtd].classList.remove('collapse');
-				document.getElementsByClassName('dias')[this.chave%qtd].classList.remove('show');
-				document.getElementsByClassName('dias')[this.chave%qtd].classList.add('collapsing');
-			}			
+				location.href = "registros.html"	
+			}
 		}
 	},
 	mounted(){
-		// var meses = document.getElementsByClassName('icone')
-		// for (var i = 0;i<meses.length; i++) {
-		// 	if(this.icone && this.chave && !this.filho){
-		// 		meses[i].classList.add('oi')
-		// 		meses[i].classList.add('oi-share')
-		// 	}
-		// }
 	}
 });
 

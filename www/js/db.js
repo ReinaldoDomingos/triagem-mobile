@@ -1,4 +1,5 @@
-var db = null, consultas= undefined;
+var db = null, consultas= [];
+
 var consultas_processadas = false
 db = window.openDatabase("triagem", "1.0", "Triagem DB", 1000000);
 db.transaction(populateDB, errorCB, successCB);
@@ -27,17 +28,17 @@ var id = 0;
 function populateDB(tx) {
     tx.executeSql('CREATE TABLE IF NOT EXISTS consultas (id INTEGER PRIMARY KEY AUTOINCREMENT, nome, sexo, idade, '
         +'posto, cidade, pa, temp, peso, altura, pulso, glicemia, salo2, medicamentos, queixa, datahora_inicio, '+
-        'has, cardiopata, diabetes, alergia)');
+        'has, cardiopata, diabetes, alergia, dia, mes, ano)');
 }
 function insertDB(tx) {
     cadastrar();    
     var p = JSON.parse(localStorage.getItem('paciente-dados'))
 
     tx.executeSql("INSERT INTO consultas (nome,sexo,idade,posto,cidade,pa,temp,peso,altura,pulso,glicemia,"+
-        "salo2,medicamentos,queixa,datahora_inicio, has, cardiopata, diabetes, alergia) VALUES ('"+p.nome+"','"+
+        "salo2,medicamentos,queixa,datahora_inicio, has, cardiopata, diabetes, alergia, dia, mes, ano) VALUES ('"+p.nome+"','"+
         p.sexo+"','"+p.idade+"','" +p.posto+"','"+p.cidade+"','"+p.pa+"','"+p.temp+"','"+p.peso+"','"+p.altura+"','"+p.pulso+"','"+
         p.glicemia+"','"+p.salo2+"','"+p.medicamentos+"','"+p.queixa+"','"+p.datahora_inicio+"', '"+
-        p.has+"','"+p.cardiopata+"','"+p.diabetes+"','"+p.alergia+"')");
+        p.has+"','"+p.cardiopata+"','"+p.diabetes+"','"+p.alergia+"', '"+p.dia+"', '"+p.mes+"', '"+p.ano+"')");
 }
 function queryDB(tx) {
     tx.executeSql('SELECT * FROM consultas', [], querySuccess, errorCB);
@@ -45,10 +46,25 @@ function queryDB(tx) {
 // Query the success callback
 //
 function querySuccess(tx, results) {
+    const nome_mes = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"]
     var len = results.rows.length;
     var tipoReg = "";
-    consultas = results.rows
-    listar_registros()
+
+    for (var i = 0; i < 12; i++) {
+        consultas[i] = {
+            id:i,
+            nome: nome_mes[i],
+            dias: []
+        }
+    }
+
+    for (var i = 0; i < results.rows.length; i++) {
+        var mes = Number(results.rows.item(i).mes)
+        consultas[mes-1].dias[consultas[mes-1].dias.length] = results.rows.item(i)
+    }
+
+    if(location.href.indexOf('relatorio.html')!=-1)
+        listar_registros()
 }
 function queryConsultaDB(tx) {
     tx.executeSql('SELECT * FROM consultas', [], queryConsultaSuccess, errorCB);
@@ -58,8 +74,7 @@ function queryConsultaDB(tx) {
 //
 function queryConsultaSuccess(tx, results) {
     var size = results.rows.length;
-    consultas = results.rows; 
-    consultas_processadas= true 
+    // consultas = results.rows;     
 }
 
 function apagar(id) {

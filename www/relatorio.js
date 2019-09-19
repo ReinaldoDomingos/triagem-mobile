@@ -11,56 +11,25 @@ function listar_registros(){
 					dias: [
 					10,20
 					]
-				},
-
-			// form: {
-			// 	data: '',
-			// 	forms: [{nome:''}]
-			// }
-			
+				}		
+			},
+			messes: {
+				id: 1
+			},
 		},
-		messes: {
-			id: 1
+		mounted(){
+			this.meses = consultas;		
 		},
-	},
-	mounted(){
-		$('.collapse').collapse('hide');
-		// console.log(this.meses)
-	},
-	beforeCreate(){
-		var db = window.openDatabase("triagem", "1.0", "Triagem DB", 1000000);
-		console.log(db)
-
-		db.transaction(queryConsultaDB, errorCB);
-
-		Promise.resolve(consultas).then(function(value) {
-
-			console.log(consultas); 
-		}, function(value) {
-			console.log("Erro")
-		});
-
-
-		var original = Promise.resolve(consultas_processadas);
-		var cast = Promise.resolve(original);
-		cast.then(function(v) {
-			console.log(consultas); 
-		});
-
-		
-	},
-	methods: {
-		abrirCollapse: function(){
-			console.log("ok")
+		beforeCreate(){
+			var db = window.openDatabase("triagem", "1.0", "Triagem DB", 1000000);
+			$('.collapse').collapse('hide');
 		},
-		watch:{
-			listar: function(){
-				console.log(consultas)
+		methods: {
+			abrirCollapse: function(){
+				console.log("ok")
 			}
-
 		}
-	}
-});
+	});
 	var imported = document.createElement('script');
 	imported.src = 'js/button-container.js';
 	document.head.appendChild(imported); 
