@@ -1,5 +1,6 @@
+var teste
 Vue.component('button-container',{
-	props:['pagina','titulo','icone','chave','filho'],
+	props:['pagina','titulo','icone','chave','filho','id','mess'],
 	template: ` <div  class="row" style="width: -webkit-fill-available;">
 	<div class="col-1">
 	</div>
@@ -32,8 +33,13 @@ Vue.component('button-container',{
 					document.getElementsByClassName('dias')[this.chave%qtd].classList.remove('show');
 					document.getElementsByClassName('dias')[this.chave%qtd].classList.add('collapsing');
 				}
-			}else{
-				location.href = "registros.html"	
+			}else{				
+				console.log(this.id)
+				console.log(this.mess)
+				alert("a")
+				localStorage.setItem('consulta-id', this.id)
+				localStorage.setItem('consulta-mes', this.mess)
+				location.href = "registros.html"						
 			}
 		}
 	},

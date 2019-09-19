@@ -10,18 +10,11 @@ Vue.component('titulo-container',{
         return{
             paciente:{nome: '',sexo:'',idade:''}
         }
-    },
-    mounted: function() {
-        var paciente_dados = JSON.parse(localStorage.getItem('paciente-dados'))
-        this.paciente.nome = paciente_dados.nome
-        this.paciente.idade  = paciente_dados.idade
-        this.paciente.sexo = paciente_dados.sexo
     }
 });
 
 var cadastro = new Vue({
     el: '#titulo-container',
     data:{
-        dia: '24/Agosto'
     }
 });

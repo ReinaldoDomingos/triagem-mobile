@@ -36,7 +36,7 @@
 
                                     <div  class="collapse show dias" aria-labelledby="headingOne" data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <button-container v-for="dia in mes.dias" class="cinza" filho="true" v-bind:titulo="dia.dia" icone="true"></button-container>
+                                            <button-container v-for="dia in mes.dias" class="cinza" filho="true" v-bind:titulo="dia.dia" icone="true" v-bind:id="dia.id" v-bind:mess="dia.mes"></button-container>
                                         </div>
                                     </div>
                                 </div>

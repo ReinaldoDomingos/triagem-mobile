@@ -1,4 +1,6 @@
-var db = null, consultas= [];
+var nome_mes = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho",
+"Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"]
+var db = null, consultas= [], consulta;
 
 var consultas_processadas = false
 db = window.openDatabase("triagem", "1.0", "Triagem DB", 1000000);
@@ -46,7 +48,6 @@ function queryDB(tx) {
 // Query the success callback
 //
 function querySuccess(tx, results) {
-    const nome_mes = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"]
     var len = results.rows.length;
     var tipoReg = "";
 
@@ -65,6 +66,24 @@ function querySuccess(tx, results) {
 
     if(location.href.indexOf('relatorio.html')!=-1)
         listar_registros()
+    else if (location.href.indexOf('registros.html')!=-1){        
+        var id =  localStorage.getItem('consulta-id')
+        var mes = localStorage.getItem('consulta-mes')
+        console.log(id)
+        console.log(mes)
+        if(id & mes){
+            for (var i = 0; i < consultas[mes-1].dias.length; i++) {
+                if(consultas[mes-1].dias[i].id == id){
+                    consulta = consultas[mes-1].dias[i]
+                    break
+                }
+            }
+            listar_registro()
+        }else if(mes){
+            consulta = consulta[mes-1].dias[0]
+            listar_registro(consulta[mes-1].dias.length)            
+        }
+    }
 }
 function queryConsultaDB(tx) {
     tx.executeSql('SELECT * FROM consultas', [], queryConsultaSuccess, errorCB);
