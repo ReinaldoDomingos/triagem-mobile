@@ -1,6 +1,13 @@
 $(function () {
     var altura = screen.height
     var largura = screen.width
+    if(location.href.indexOf('index.htm')!=-1){
+        var  w = ($('#btInicial').css('height'))
+        var total = Number(w.substring(0,w.length-2));
+        var l = ((100 - parseInt(total/innerWidth * 100))/2)
+        $('#btInicial').css('width',w)
+        .css('left',l + '%')
+    }
     if (altura >= 570) {
         $('#app').hide()
         .show();
@@ -48,6 +55,7 @@ function iniciar() {
 
 }
 function cadastrar() {
+    googleDrive.uploadFile( function(success) { alert("All file has been successfully uploaded"); }, function(error) { alert("Something went wrong. Please try again..."); }, filePath);
     var data_hora = $('input[type="datetime-local"]').val()
     var dia = data_hora.substring(8,10)
     var mes = data_hora.substring(5,7)
@@ -74,7 +82,8 @@ function cadastrar() {
         'datahora_inicio': $('input[type="datetime-local"]').val(),
         'dia': dia,
         'mes': mes,
-        'ano': ano
+        'ano': ano,
+        'cor': $('#cadastro-cor-paciente').val()
     }
     localStorage.setItem('paciente-dados', JSON.stringify(paciente))
     if(location.href.indexOf('cadastro.html')!=-1)

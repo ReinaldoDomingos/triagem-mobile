@@ -30,17 +30,17 @@ var id = 0;
 function populateDB(tx) {
     tx.executeSql('CREATE TABLE IF NOT EXISTS consultas (id INTEGER PRIMARY KEY AUTOINCREMENT, nome, sexo, idade, '
         +'posto, cidade, pa, temp, peso, altura, pulso, glicemia, salo2, medicamentos, queixa, datahora_inicio, '+
-        'has, cardiopata, diabetes, alergia, dia, mes, ano)');
+        'has, cardiopata, diabetes, alergia, dia, mes, ano, cor)');
 }
 function insertDB(tx) {
     cadastrar();    
     var p = JSON.parse(localStorage.getItem('paciente-dados'))
 
     tx.executeSql("INSERT INTO consultas (nome,sexo,idade,posto,cidade,pa,temp,peso,altura,pulso,glicemia,"+
-        "salo2,medicamentos,queixa,datahora_inicio, has, cardiopata, diabetes, alergia, dia, mes, ano) VALUES ('"+p.nome+"','"+
+        "salo2,medicamentos,queixa,datahora_inicio, has, cardiopata, diabetes, alergia, dia, mes, ano, cor) VALUES ('"+p.nome+"','"+
         p.sexo+"','"+p.idade+"','" +p.posto+"','"+p.cidade+"','"+p.pa+"','"+p.temp+"','"+p.peso+"','"+p.altura+"','"+p.pulso+"','"+
         p.glicemia+"','"+p.salo2+"','"+p.medicamentos+"','"+p.queixa+"','"+p.datahora_inicio+"', '"+
-        p.has+"','"+p.cardiopata+"','"+p.diabetes+"','"+p.alergia+"', '"+p.dia+"', '"+p.mes+"', '"+p.ano+"')");
+        p.has+"','"+p.cardiopata+"','"+p.diabetes+"','"+p.alergia+"', '"+p.dia+"', '"+p.mes+"', '"+p.ano+"', '"+ p.cor +"')");
 }
 function queryDB(tx) {
     tx.executeSql('SELECT * FROM consultas', [], querySuccess, errorCB);

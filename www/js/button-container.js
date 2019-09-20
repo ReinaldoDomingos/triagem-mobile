@@ -5,7 +5,7 @@ Vue.component('button-container',{
 	<div class="col-1">
 	</div>
 	<div class="col-10">
-	<button id="btContainer"  style="width: -webkit-fill-available;" v-on:click="exportar()" class="btn btn-light doenca">{{titulo}}
+	<button id="btContainer"  style="width: -webkit-fill-available;" v-on:click="ir(pagina)" class="btn btn-light doenca">{{titulo}}
 	<span v-bind:class="{'oi': this.filho!='true', 'oi-share': this.filho!='true'}" style="float: right;" v-on:click="exportar()"></span>
 	</button> 
 	</div>
@@ -25,14 +25,18 @@ Vue.component('button-container',{
 				window.location.href = 'registros.html';
 			}else if(location.href.indexOf('registros.html')!=-1){
 				var doc = new jsPDF('landscape');
-				doc.addHTML($('#registros'), function() {
-					doc.save("relatorio_pesquisa.pdf");
-				});
+				doc.addHTML(
+					'<a>a</a>'
+					, function() {
+						doc.save("consultas.pdf");
+					});
 			}
 		},
 		ir: function(){
 			if(this.pagina)
 				window.location.href = this.pagina;
+			else if(location.href.indexOf('relatorio.html')!=-1)
+				this.exportar()
 			else
 				this.mostrarConteudo()
 		},

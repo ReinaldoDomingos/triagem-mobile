@@ -3,6 +3,7 @@ Vue.component('titulo-container',{
     template: 
     `<div class="paciente alert alert-dark dados-paciente titulo-container" role="alert">
     <h1>{{titulo}}
+    
     <span v-bind:class="{'oi': this.filho!='true', 'oi-share': this.filho!='true'}" class: style="float: right;" onclick="exportar()"></span>
     </h1>
     </div>`,

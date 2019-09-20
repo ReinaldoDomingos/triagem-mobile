@@ -9,6 +9,7 @@ Vue.component('cadastro',{
    <span class="input-group-text oi oi-person"></span>
    </div>
    <input id="cadastro-nome-paciente" type="text" class="form-control" required="true" placeholder="Nome completo">
+   <input id="cadastro-cor-paciente" type="hidden" class="form-control" required="true" value="vermelho">
    </div>
 
    <div class="row">
@@ -100,6 +101,7 @@ Vue.component('cadastro',{
    </div>
    </div>
    </div>
+
    <div class="row">
    <div class='col-6 col-sm'>
    <div class="form-group mb-2">

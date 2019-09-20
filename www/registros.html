@@ -23,87 +23,91 @@
         <div id="titulo-container">            
             <titulo-container v-bind:titulo="titulo" filho="false" ></titulo-container>
         </div>
-        <div id="cont" class="row">
-            <div id="imgs" class="col-md-6 col-lg-12 col-sm-12">
-                <img class="logos logo-ufms col-6 col-sm-6 col-lg-3" src="assets/img/ufms.jpg" alt="">
-                <img class="logos logo-talentw col-5 col-sm-6 col-lg-3" src="assets/img/talentw2.png" alt="">
-            </div>
+        <div id="cont" class="row">            
             <div id="main" class="col-12 col-sm-12 col-md-8">
                 <div id="scroller" class="row vertical-center">
                     <div class="row" id="button">
                         <div  v-for="consulta in consultas" class="row"  style="width: -webkit-fill-available;">
                             <div class="card">
                                 <div  class="card-header col-12" id="headingOne">
-                                    <h3>Dia: {{consulta.dia}}</h3>
+                                    <h3>Dia: {{consulta.dia}}/{{consulta.mes}}/{{consulta.ano}}</h3>
                                     <div  class="collapse show dias" aria-labelledby="headingOne" data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <table>                                                
-                                                <tr>
-                                                    <th>Sexo:</th>
-                                                    <td> {{consulta.sexo}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th> Idade:</th>
-                                                    <td> {{consulta.idade}} anos</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Cidade: </th>
-                                                    <td> {{consulta.cidade}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>UBS:</th>
-                                                    <td> {{consulta.posto}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>PA:</th>
-                                                    <td> {{consulta.pa}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Temperatura:</th>
-                                                    <td> {{consulta.temp}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Peso:</th>
-                                                    <td> {{consulta.peso}} KG</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>UBS:</th>
-                                                    <td> {{consulta.altura}} metros</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Pulso:</th>
-                                                    <td> {{consulta.pulso}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Glicemia:</th>
-                                                    <td> {{consulta.glicemia}}</td>
-                                                </tr>                                                
-                                                <tr>
-                                                    <th>SalO²:</th>
-                                                    <td> {{consulta.salo2}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>HAS:</th>
-                                                    <td> {{(consulta.has)?"Possui":"Não possui"}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Diabetes:</th>
-                                                    <td> {{(consulta.diabetes)?"Possui":"Não possui"}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Cardiopata:</th>
-                                                    <td> {{(consulta.cardiopata)?"Sim":"Não"}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Alergia a medicamentos:</th>
-                                                    <td> {{(consulta.alergia)?"Sim":"Não"}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Medicamentos:</th>
-                                                    <td> {{consulta.medicamentos}}</td>
-                                                </tr>
-                                            </table>
-                                        </div>
+                                            <table> 
+                                              <tr>
+                                                <th>Cor:</th>
+                                                <td> {{consulta.cor.replace(consulta.cor.charAt(0),consulta.cor.charAt(0).toUpperCase())}}</td>
+                                            </tr>                                               
+                                            <tr>
+                                                <th>Sexo:</th>
+                                                <td> {{consulta.sexo}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th> Idade:</th>
+                                                <td> {{consulta.idade}} anos</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Cidade: </th>
+                                                <td> {{consulta.cidade}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>UBS:</th>
+                                                <td> {{consulta.posto}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>PA:</th>
+                                                <td> {{consulta.pa}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Temperatura:</th>
+                                                <td> {{consulta.temp}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Peso:</th>
+                                                <td> {{consulta.peso}} KG</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Altura:</th>
+                                                <td> {{consulta.altura}} metros</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Pulso:</th>
+                                                <td> {{consulta.pulso}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Glicemia:</th>
+                                                <td> {{consulta.glicemia}}</td>
+                                            </tr>                                                
+                                            <tr>
+                                                <th>SalO²:</th>
+                                                <td> {{consulta.salo2}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>HAS:</th>
+                                                <td> {{(consulta.has)?"Possui":"Não possui"}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Diabetes:</th>
+                                                <td> {{(consulta.diabetes)?"Possui":"Não possui"}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Cardiopata:</th>
+                                                <td> {{(consulta.cardiopata)?"Sim":"Não"}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Alergia a medicamentos:</th>
+                                                <td> {{(consulta.alergia)?"Sim":"Não"}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Medicamentos:</th>
+                                                <td> {{consulta.medicamentos}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Queixa:</th>
+                                                <td> {{consulta.queixa}}</td>
+                                            </tr>
+                                            
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -113,15 +117,17 @@
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
-    <script src="js/SQLitePlugin.js"></script>
-    <script src="js/db.js"></script>
-    <script src="assets/libs/vue/vue.js"></script>                      
-    <script src="script.js"></script>
-    <!-- <script src="js/button-container.js"></script>     -->
-    <!-- <script src="titulo-container.js"></script>     -->
-    <script src="registros.js"></script>    
-    <script src="cordova.js"></script>
-    <script src="js/index.js"></script>  
+</div>
+<script src="js/html2canvas.js"></script>
+<script src="js/jspdf.min.js"></script>
+<script src="js/SQLitePlugin.js"></script>
+<script src="js/db.js"></script>
+<script src="assets/libs/vue/vue.js"></script>                      
+<script src="script.js"></script>
+<!-- <script src="js/button-container.js"></script>     -->
+<!-- <script src="titulo-container.js"></script>     -->
+<script src="registros.js"></script>    
+<script src="cordova.js"></script>
+<script src="js/index.js"></script>  
 </body>
 </html>

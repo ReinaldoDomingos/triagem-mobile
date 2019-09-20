@@ -66,6 +66,7 @@ var app = new Vue({
         methods:{
                 voltar(){
                         if (this.estadoAtual == 'vermelho'){
+                                $('#cadastro-cor-paciente').val(this.estadoAtual)
                                 window.history.back();
                         } else if (this.estadoAtual == "laranja") {
                                 this.estadoAtual = 'vermelho'
@@ -76,6 +77,7 @@ var app = new Vue({
                         } else{
                                 this.estadoAtual = 'verde'
                         }
+                        $('#cadastro-cor-paciente').val(this.estadoAtual)
                 },
                 abrirModal(n) {
                         if (n){
@@ -119,6 +121,7 @@ naoPossui(){
         else {
                 this.estadoAtual = 'azul';
         }
+        $('#cadastro-cor-paciente').val(this.estadoAtual)        
 },
 onChangePage(pageOfItems) {
         this.pageOfItems = pageOfItems;
