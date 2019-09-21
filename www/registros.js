@@ -35,130 +35,39 @@ function listar_registro(mes){
 	document.head.appendChild(imported); 
 }
 function exportar(){	
-	console.log(lista_mes)
-	console.log('ok')
-	var doc = new jsPDF();
-	var pos_l = 20;	
-	var max = 290
-	doc.text(pos_l,pos_l,"			Relatório Mensal de Classificação");
-	pos_l += 30;
+	var s = '';
+	s+='<h1>			Relatório Mensal de Classificação</h1> <br>';
 	for(var i =0; i<lista_mes.dias.length;i++){
-		if(pos_l>260){
-			doc.addPage() 
-			pos_l = 20;
-		}
-		doc.text(20,pos_l,"Data: "+lista_mes.dias[i].dia +'/'+lista_mes.dias[i].mes+'/'+lista_mes.dias[i].ano);
-		pos_l+=10
-		if(pos_l>max){
-			doc.addPage() 
-			pos_l = 20;
-		}
+		s+='<h1>Data: '+lista_mes.dias[i].dia +'/'+lista_mes.dias[i].mes+'/'+lista_mes.dias[i].ano + '</h1>';
 		var cor = lista_mes.dias[i].cor
-		doc.text(20,pos_l,"		Cor: "+cor.replace(cor.charAt(0),cor.charAt(0).toUpperCase()));
-		pos_l+=10
-
-		doc.text(20,pos_l,"		Sexo: "+lista_mes.dias[i].sexo);
-		pos_l+=10
-		if(pos_l>max){
-			doc.addPage() 
-			pos_l = 20;
-		}
-		doc.text(20,pos_l,"		Idade: "+lista_mes.dias[i].idade + ' anos');
-		pos_l+=10
-		if(pos_l>max){
-			doc.addPage() 
-			pos_l = 20;
-		}
-		doc.text(20,pos_l,"		Cidade: "+lista_mes.dias[i].cidade);
-		pos_l+=10
-		if(pos_l>max){
-			doc.addPage() 
-			pos_l = 20;
-		}
-		doc.text(20,pos_l,"		UBS: "+lista_mes.dias[i].posto);
-		pos_l+=10
-		if(pos_l>max){
-			doc.addPage() 
-			pos_l = 20;
-		}
-		doc.text(20,pos_l,"		PA: "+lista_mes.dias[i].pa);
-		pos_l+=10
-		if(pos_l>max){
-			doc.addPage() 
-			pos_l = 20;
-		}
-		doc.text(20,pos_l,"		Temperatura: "+lista_mes.dias[i].temp);
-		pos_l+=10
-		if(pos_l>max){
-			doc.addPage() 
-			pos_l = 20;
-		}
-		doc.text(20,pos_l,"		Peso: "+lista_mes.dias[i].peso + ' KG');
-		pos_l+=10
-		if(pos_l>max){
-			doc.addPage() 
-			pos_l = 20;
-		}
-		doc.text(20,pos_l,"		Altura: "+lista_mes.dias[i].altura + ' metros');
-		pos_l+=10
-		if(pos_l>max){
-			doc.addPage() 
-			pos_l = 20;
-		}
-		doc.text(20,pos_l,"		Pulso: "+lista_mes.dias[i].pulso);
-		pos_l+=10
-		if(pos_l>max){
-			doc.addPage() 
-			pos_l = 20;
-		}
-		doc.text(20,pos_l,"		Glicemia: "+lista_mes.dias[i].glicemia);
-		pos_l+=10
-		if(pos_l>max){
-			doc.addPage() 
-			pos_l = 20;
-		}
-		doc.text(20,pos_l,"		SalO²: "+lista_mes.dias[i].salo2);
-		pos_l+=10
-		if(pos_l>max){
-			doc.addPage() 
-			pos_l = 20;
-		}
-		doc.text(20,pos_l,"		HAS: "+((lista_mes.dias[i].has)?"Sim":"Não"));
-		pos_l+=10
-		if(pos_l>max){
-			doc.addPage() 
-			pos_l = 20;
-		}
-		doc.text(20,pos_l,"		Diabetes: "+((lista_mes.dias[i].diabetes)?"Sim":"Não"));
-		pos_l+=10
-		if(pos_l>max){
-			doc.addPage() 
-			pos_l = 20;
-		}
-		
-		doc.text(20,pos_l,"		Cardiopata: "+((lista_mes.dias[i].cardiopata)?"Sim":"Não"));
-		pos_l+=10
-		if(pos_l>max){
-			doc.addPage() 
-			pos_l = 20;
-		}
-		doc.text(20,pos_l,"		Alergia a medicamentos: "+((lista_mes.dias[i].alergia)?"Sim":"Não"));
-		pos_l+=10
-		if(pos_l>max){
-			doc.addPage() 
-			pos_l = 20;
-		}
-		doc.text(20,pos_l,"		Medicamentos: "+lista_mes.dias[i].medicamentos);		
-		pos_l+=10
-		if(pos_l>max){
-			doc.addPage() 
-			pos_l = 20;
-		}
-		doc.text(20,pos_l,"		Queixa: "+lista_mes.dias[i].queixa);		
-		pos_l+=10
-		pos_l+=10
+		s+="<b>		Cor:</b> "+cor.replace(cor.charAt(0),cor.charAt(0).toUpperCase()) + '<br>';
+		s+="<b>		Sexo:</b> "+lista_mes.dias[i].sexo + '<br>';
+		s+="<b>		Idade:</b> "+lista_mes.dias[i].idade + ' anos' + '<br>';
+		s+="<b>		Cidade:</b> "+lista_mes.dias[i].cidade + '<br>';
+		s+="<b>		UBS:</b> "+lista_mes.dias[i].posto + '<br>';
+		s+="<b>		PA:</b> "+lista_mes.dias[i].pa+ '<br>';
+		s+="<b>		Temperatura:</b> "+lista_mes.dias[i].temp+'<br>';
+		s+="<b>		Peso:</b> "+lista_mes.dias[i].peso + ' KG'+'<br>';
+		s+="<b>		Altura:</b> "+lista_mes.dias[i].altura + ' metros'+'<br>';
+		s+="<b>		Pulso:</b> "+lista_mes.dias[i].pulso+'<br>';
+		s+="<b>		Glicemia:</b> "+lista_mes.dias[i].glicemia+ '<br>';
+		s+="<b>		SalO²:</b> "+lista_mes.dias[i].salo2 + '<br>';
+		s+="<b>		HAS:</b> "+((lista_mes.dias[i].has)?"Sim":"Não") + '<br>';
+		s+="<b>		Diabetes:</b> "+((lista_mes.dias[i].diabetes)?"Sim":"Não")+'<br>';
+		s+= "<b>		Cardiopata:</b> "+((lista_mes.dias[i].cardiopata)?"Sim":"Não")+ '<br>';
+		s+= "<b>		Alergia a medicamentos:</b> "+((lista_mes.dias[i].alergia)?"Sim":"Não") + '<br>';
+		s+="<b>		Medicamentos:</b> "+lista_mes.dias[i].medicamentos+ '<br>';		
+		s += "<b>		Queixa:</b> "+lista_mes.dias[i].queixa + '<br><br>';		
 	}
-	doc.save('consultas.pdf')
 
-	
+	let options = {
+		documentSize: 'A4',
+		type: 'share'
+	}
+
+	pdf.fromData( '<html>'+s+'</html>', options)
+    .then((stats)=> console.log('status', stats) )   // ok..., ok if it was able to handle the file to the OS.  
+    .catch((err)=>console.err(err))
+
+
 }

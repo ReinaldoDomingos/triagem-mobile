@@ -4,7 +4,7 @@ Vue.component('titulo-container',{
     `<div class="paciente alert alert-dark dados-paciente titulo-container" role="alert">
     <h1>{{titulo}}
     
-    <span v-bind:class="{'oi': this.filho!='true', 'oi-share': this.filho!='true'}" class: style="float: right;" onclick="exportar()"></span>
+    <span style="float: right;" onclick="exportar()"> <i class='material-icons'>save_alt</i></span>
     </h1>
     </div>`,
     data(){

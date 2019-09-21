@@ -6,7 +6,7 @@ Vue.component('button-container',{
 	</div>
 	<div class="col-10">
 	<button id="btContainer"  style="width: -webkit-fill-available;" v-on:click="ir(pagina)" class="btn btn-light doenca">{{titulo}}
-	<span v-bind:class="{'oi': this.filho!='true', 'oi-share': this.filho!='true'}" style="float: right;" v-on:click="exportar()"></span>
+	<span  style="float: right;" v-on:click="exportar()"><i v-show="this.filho" class='material-icons'>save_alt</i></span>
 	</button> 
 	</div>
 	<div class="col-1">
