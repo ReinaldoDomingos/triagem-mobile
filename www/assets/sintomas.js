@@ -3,7 +3,7 @@ var lista_sintomas = [
         "vermelho": [
             "Obstrução de Vias Aéreas",
             "Respiração Inadequada",
-            "Hemorragia exaguinate",
+            "Hemorragia exaguinante",
             "Choque"
         ],
         "laranja": [
@@ -49,7 +49,7 @@ var lista_sintomas = [
         ],
         "amarelo": [
             "Sat O2 Baixa",
-            "Erupção ou Vesículas Dissemidas",
+            "Erupção ou Vesículas Disseminadas",
             "Dor ou Coceira Moderadas"
         ],
         "verde": [
@@ -73,7 +73,7 @@ var lista_sintomas = [
             "Alto risco de autoagressão"
         ],
         "amarelo": [
-            "História de Trauma Craniocefálico",
+            "História de Trauma Cranioencefálico",
             "História de Incosciência",
             "Déficit Neurológico Novo",
             "História Psiquiátrica Importante",
@@ -104,7 +104,7 @@ var lista_sintomas = [
             "PFE Baixo"
         ],
         "verde": [
-            "Chiera",
+            "Chieira",
             "Tosse produtiva",
             "Evento Recente"
         ]
@@ -187,7 +187,7 @@ var lista_sintomas = [
             "Dor Intensa"
         ],
         "amarelo": [
-            "História de Trauma Craniocefálico",
+            "História de Trauma Cranioencefálico",
             "História de Inconsciência",
             "Distúrbio de Coagulação",
             "História Discordante",
@@ -256,7 +256,6 @@ var lista_sintomas = [
         "amarelo": [
             "História Discordante",
             "Hemorragia Menor Incontrolável",
-            "Déficit Neurológico Novo",
             "Dor Moderada"
         ],
         "verde": [
@@ -282,7 +281,7 @@ var lista_sintomas = [
             "Resposta à Voz ou à Dor Apenas",
             "História de Overdose ou Envenenamento",
             "Sinais de Meningismo",
-            "Erupção Cutânra Fixa",
+            "Erupção Cutânea Fixa",
             "Púrpura",
             "Criança Quente",
         ],
@@ -311,7 +310,7 @@ var lista_sintomas = [
         "laranja": [
             "Sinais de Dor Intensa",
             "Comprometimento vascular distal",
-            "Erupção Cutânra Fixa",
+            "Erupção Cutânea Fixa",
             "Púrpura",
             "Criança Quente",
         ],
@@ -348,7 +347,7 @@ var lista_sintomas = [
             "Alteração Súbita da Consciência",
             "Déficit Neurológico Agudo",
             "Púrpura",
-            "Erupção Cutânra Fixa",
+            "Erupção Cutânea Fixa",
             "Adulto Muito Quente",
             "Hipotermia",
             "Dor Intensa"
@@ -411,7 +410,6 @@ var lista_sintomas = [
             "Evacuação de Sangue Vivo ou Escurecido",
             "Vômito de Sangue",
             "Prostação, Hipotonia",
-            "Criança Muito Quente",
             "Dor Intensa"
         ],
         "amarelo": [
@@ -446,6 +444,7 @@ var lista_sintomas = [
             "Início Agudo Após Trauma",
             "Pulso Anormal",
             "Alteração Súbita da Consciência",
+            "Exaustão",
             "Dor Epigástrica",
             "PFE Muito Baixo"
         ],
@@ -492,7 +491,8 @@ var lista_sintomas = [
         "verde": [
             "Chieira",
             "Tosse Produtiva",
-            "Truma Torácico",
+            "Tra" +
+            "uma Torácico",
             "Evento Recente"
         ]
     },
@@ -555,8 +555,8 @@ var lista_sintomas = [
         ],
         "laranja": [
             "Dor Irradiada Para o Dorso",
-            "Hemoptise",
-            "Melena",
+            "Vômito de Sangue",
+            "Evacuação de Sangue Vivo/Escurecido",
             "Sangramento Vaginal, > 20 Semanas de Gravidez",
             "Adulto Muito Quente",
             "Dor Epigástrica",
@@ -584,25 +584,25 @@ var lista_sintomas = [
             "Choque"
         ],
         "laranja": [
-            "Dor Irradia Para o Dorso",
+            "Sinais de Dor Intensa",
             "Vômito de Sangue",
             "Evacuação de Sangue Vivo ou Escurecido",
-            "Sangramento Vaginal, > 20 Semanas de Gravidez",
-            "Adulto Muito Quente",
-            "Dor Intensa"
+            "Criança Quente",
+            "Púrpura",
+            "Erupção Cutânea Fixa"
         ],
         "amarelo": [
-            "Gravidez Possível",
-            "Dor Irradiada Para Ombro",
+            "Sinais de Dor Moderada",
+            "Inconsolável Pelos Pais",
+            "Massa Abdominal Visível",
             "Fezes Pretas ou em Groselha",
             "História Aguda de Vômito de Sangue",
             "Vômitos Persistentes",
-            "Adulto Quente",
-            "Dor Moderada"
+            "História Discordante"
         ],
         "verde": [
+            "Sinais de Dor Leve Recente",
             "Vômitos",
-            "Dor Leve Recentemente",
             "Evento Recente"
         ]
     },
@@ -622,12 +622,14 @@ var lista_sintomas = [
             "Dor Intensa"
         ],
         "amarelo": [
-            "Trauma direto no pescoço",
+            "Trauma Direto no Pescoço",
             "Déficit Neurológico Novo",
             "Adulto Quente",
             "Dor Moderada"
         ],
         "verde": [
+            "Dor Leve Recente",
+            "Evento Recente"
         ]
     },
     {//Dor de Garganta
@@ -672,7 +674,7 @@ var lista_sintomas = [
         ],
         "amarelo": [
             "Déficit Neurológico Novo",
-            "Truama direto no dorso",
+            "Truama Direto no Dorso",
             "Adulto Quente",
             "Cólicas",
             "História discordante",
@@ -698,7 +700,7 @@ var lista_sintomas = [
             "Dor Intensa"
         ],
         "amarelo": [
-            "Celulite de escroto",
+            "Celulite de Escroto",
             "Cólicas",
             "Vômitos Persistentes",
             "Adulto Quente",
@@ -707,7 +709,7 @@ var lista_sintomas = [
         "verde": [
             "Trauma de escroto",
             "Vômitos",
-            "Dor Leve Recentemente",
+            "Dor Leve Recente",
             "Evento Recente"
         ]
     },
@@ -724,14 +726,14 @@ var lista_sintomas = [
             "Dor Intensa"
         ],
         "amarelo": [
-            "Dor Pleuritica",
+            "Dor Pleurítica",
             "Vômitos Persistentes",
             "História Cardíaca Importante",
             "Dor Moderada"
         ],
         "verde": [
             "Vômitos",
-            "Dor Leve Recentemente",
+            "Dor Leve Recente",
             "Evento Recente"
         ]
     },
@@ -779,6 +781,7 @@ var lista_sintomas = [
             "Erupção Cutânea Fixa",
             "Púrpura",
             "Adulto Muito Quente",
+            "Criança Quente",
             "Dor ou Coceira Intensas"
         ],
         "amarelo": [
@@ -800,19 +803,19 @@ var lista_sintomas = [
             "Respiração Inadequada",
             "Choque",
             "Convulsionando",
-            "Lesão ocular química aguda"
+            "Lesão Ocular Química Aguda"
         ],
         "laranja": [
             "Mortalidade alta",
             "Edema Facial",
             "Edema de Língua",
             "Alteração Súbita Da Consciência",
-            "Risco de contaminação persistente",
+            "Risco de contaminação Persistente",
             "Sat O2 Muito Baixa",
             "Dor Intensa"
         ],
         "amarelo": [
-            "Mortalidade moderada",
+            "Mortalidade Moderada",
             "Erupção ou Vesículas Disseminadas",
             "História discordante",
             "Sat O2 Baixa",
@@ -856,7 +859,7 @@ var lista_sintomas = [
             "Hemorragia Exanguinante",
             "Choque",
             "Apresentação de partes fetais",
-            "Prolapso de cordão umbilical",
+            "Prolapso de Cordão Umbilical",
             "Convulsionando"
         ],
         "laranja": [
@@ -890,16 +893,16 @@ var lista_sintomas = [
         ],
         "laranja": [
             "Vômito de sangue",
-            "Evacuação de sangue vivo ou escurecido",
-            "História de Hemorragia digestiva importante",
+            "Evacuação de Sangue Vivo ou Escurecido",
+            "História de Hemorragia Digestiva Importante",
             "Alteração Súbita Da Consciência",
             "Dor Intensa"
         ],
         "amarelo": [
-            "Fezes pretas ou em groselha",
-            "História aguda de vômito de sangue",
-            "Distúrbio da coagulação",
-            "Vômitos persistentes",
+            "Fezes Pretas ou em Groselha",
+            "História Aguda de Vômito de Sangue",
+            "Distúrbio da Coagulação",
+            "Vômitos Persistentes",
             "Dor Moderada"
         ],
         "verde": [
@@ -915,8 +918,8 @@ var lista_sintomas = [
             "Choque"
         ],
         "laranja": [
-            "Comprometimento vascular distal",
-            "Enfisema subcutâneo",
+            "Comprometimento Vascular Distal",
+            "Enfisema Subcutâneo",
             "Criança quente",
             "Adulto muito quente",
             "Dor Intensa"
@@ -945,10 +948,10 @@ var lista_sintomas = [
             "Alteração Súbita Da Consciência",
             "Hemoptise",
             "Pulso anormal",
-            "Sinais de meningismo",
-            "Déficit neurológico agudo",
-            "Risco especial de Infecção",
-            "Erupção cutânea fixa",
+            "Sinais de Meningismo",
+            "Déficit Neurológico Agudo",
+            "Risco Especial de Infecção",
+            "Erupção Cutânea Fixa",
             "Púrpura",
             "Adulto muito quente",
             "Hipotermia",
@@ -957,12 +960,12 @@ var lista_sintomas = [
         "amarelo": [
             "Inicio Súbito",
             "História de hemoptise",
-            "História viagem recente",
-            "Déficit neurológico Novo",
-            "Imunopressão conhecida",
-            "Distúrbio de coagulação",
-            "Erupção ou vesículas disseminadas",
-            "Adulto quente",
+            "História de Viagem Recente",
+            "Déficit Neurológico Novo",
+            "Imunossupressão Conhecida",
+            "Distúrbio de Coagulação",
+            "Erupção ou Vesículas Disseminadas",
+            "Adulto Quente",
             "Dor Moderada"
         ],
         "verde": [
@@ -978,14 +981,14 @@ var lista_sintomas = [
             "Choque",
             "Hipoglicemia",
             "Convulsionando",
-            "Criança não reativa"
+            "Criança Não Reativa"
         ],
         "laranja": [
             "Sinais de Dor Intensa",
-            "Resposta a dor ou a voz apenas",
-            "Não reage aos pais",
-            "Sinais de meningismo",
-            "Erupção cutânea fixa",
+            "Resposta a Dor ou a Voz Apenas",
+            "Não Reage aos Pais",
+            "Sinais de Meningismo",
+            "Erupção Cutânea Fixa",
             "Púrpura",
             "Criança quente",
             "Hipotermia"
@@ -1044,7 +1047,7 @@ var lista_sintomas = [
             "Obstrução de Vias Aéreas",
             "Respiração Inadequada",
             "Choque",
-            "Criança não reativa",
+            "Criança Não Reativa",
             "Hipoglicemia",
             "Convulsionando",
         ],
@@ -1052,16 +1055,16 @@ var lista_sintomas = [
             "Pulso anormal",
             "Mortalidade alta",
             "Alteração Súbita Da Consciência",
-            "Alto risco de nova autoagressão",
+            "Alto risco de Nova Autoagressão",
             "Sat O2 Muito Baixa"
         ],
         "amarelo": [
             "Mortalidade Moderada",
             "Risco moderado de nova autoagressão",
-            "História psiquiátrica importante",
+            "História Psiquiátrica Importante",
             "História de Inconsciência",
             "Agitação psicomotora",
-            "História discordante",
+            "História Discordante",
             "Sat O2 Baixa"
         ],
         "verde": [
@@ -1107,8 +1110,8 @@ var lista_sintomas = [
             "Choque"
         ],
         "laranja": [
-            "Dor precordial ou cardíaca",
-            "Dispinéia aguda",
+            "Dor Precordial ou Cardíaca",
+            "Dispinéia Aguda",
             "História de Overdose ou Envenenamento",
             "Pulso anormal",
             "Alteração Súbita Da Consciência",
@@ -1116,9 +1119,9 @@ var lista_sintomas = [
             "Adulto Muito Quente"
         ],
         "amarelo": [
-            "Palpitação atual",
+            "Palpitação Atual",
             "História de Inconsciência",
-            "História cardíaca importante",
+            "História Cardíaca Importante",
             "Adulto Quente"
         ],
         "verde": [
@@ -1132,16 +1135,16 @@ var lista_sintomas = [
             "Choque"
         ],
         "laranja": [
-            "Hemorragia maior incontrolável",
+            "Hemorragia Maior Incontrolável",
             "Criança Quente",
             "Adulto Muito Quente",
             "Dor Intensa"
         ],
         "amarelo": [
-            "Hemorragia menor incontrolável",
-            "Avulsão dentária aguda",
-            "Distúrbio de coagulação",
-            "História discordante",
+            "Hemorragia Menor Incontrolável",
+            "Avulsão Dentária Aguda",
+            "Distúrbio de Coagulação",
+            "História Discordante",
             "Adulto Quente",
             "Dor Moderada"
         ],
@@ -1161,9 +1164,9 @@ var lista_sintomas = [
         ],
         "laranja": [
             "Dispinéia aguda",
-            "Pele critica",
-            "Comportamento vascular distal",
-            "Hemorragia maior incontrolável",
+            "Pele Crítica",
+            "Comportamento Vascular Distal",
+            "Hemorragia Maior Incontrolável",
             "Dor Intensa"
         ],
         "amarelo": [
@@ -1174,7 +1177,6 @@ var lista_sintomas = [
             "Déficit Neurológico Novo",
             "Distúrbio de coagulação",
             "História discordante",
-            "Adulto Quente",
             "Dor Moderada"
         ],
         "verde": [
@@ -1193,30 +1195,31 @@ var lista_sintomas = [
         ],
         "laranja": [
             "Alteração Súbita Da Consciência",
-            "Hemorragia maior incontrolável",
+            "Hemorragia maior Incontrolável",
             "Criança Quente",
             "Adulto Muito Quente",
             "Dor Intensa"
         ],
         "amarelo": [
-            "Deformidade grosseira",
-            "Distúrbio de coagulação",
-            "Redução recente da acuidade visual",
-            "Hemorragia menor incontrolável",
-            "História de inconsciência",
-            "Avulaçãp dentária aguda",
-            "História discordante",
+            "Deformidade Grosseira",
+            "Distúrbio de Coagulação",
+            "Redução Recente da Acuidade Visual",
+            "Hemorragia menor Incontrolável",
+            "História de Inconsciência",
+            "Avulaçãp Dentária Aguda",
+            "História Discordante",
             "Adulto Quente",
             "Dor Moderada"
         ],
         "verde": [
             "Febril",
             "Diplopia",
-            "Sensibilidade na face alterada",
+            "Hematoma de Orelha",
+            "Sensibilidade na Face Alterada",
             "Inchaço na face",
             "Olho vermelho",
-            "Dor leve recente",
-            "Evento recente"
+            "Dor Leve Recente",
+            "Evento Recente"
         ]
     },
     {//Problemas em Olhos
@@ -1224,24 +1227,24 @@ var lista_sintomas = [
             "Obstrução de Vias Aéreas",
             "Respiração Inadequada",
             "Choque",
-            "Lesão ocular química aguda"
+            "Lesão Ocular Química Aguda"
         ],
         "laranja": [
             "Trauma ocular prenetante",
-            "Perda total da visão aguda",
+            "Perda Total da Visão Aguda",
             "Adulto Muito Quente",
             "Criança Quente",
             "Dor Intensa"
         ],
         "amarelo": [
-            "Redução recente da acuidade visual",
+            "Redução Recente da Acuidade Visual",
             "História discordante",
             "Adulto Quente",
             "Dor Moderada"
         ],
         "verde": [
             "Olho vermelho",
-            "Sensação de corpo estranho",
+            "Sensação de Corpo Estranho",
             "Diplopia",
             "Dor leve recente",
             "Evento recente"
@@ -1255,22 +1258,23 @@ var lista_sintomas = [
         ],
         "laranja": [
             "Alteração Súbita Da Consciência",
-            "Hemorragia maior incontrolável",
+            "Hemorragia Maior Incontrolável",
             "Criança Quente",
             "Adulto Muito Quente",
             "Dor Intensa"
         ],
         "amarelo": [
-            "Hemorragia menor incontrolável",
-            "História de trauma cranioencefálico",
-            "Vômitos persistentes",
+            "Hemorragia Menor Incontrolável",
+            "História de Trauma Cranioencefálico",
+            "Vômitos Persistentes",
             "História discordantes",
             "Adulto Quente",
             "Dor Moderada"
         ],
         "verde": [
+            "Febril",
             "Perda recente de audição",
-            "Hematoma de orelha",
+            "Hematoma de Orelha",
             "Vertigem",
             "Dor leve recente",
             "Evento recente"
@@ -1291,9 +1295,9 @@ var lista_sintomas = [
         ],
         "amarelo": [
             "Cólicas",
-            "Hematúria franca",
-            "Retenção urinária",
-            "Vômitos persistentes",
+            "Hematúria Franca",
+            "Retenção Urinária",
+            "Vômitos Persistentes",
             "Adulto Quente",
             "Dor Moderada"
         ],
@@ -1349,19 +1353,19 @@ var lista_sintomas = [
         ],
         "laranja": [
             "Edema facial",
-            "Lesão por inalação",
-            "Dispnéia aguda",
-            "Mecanismo de trauma significativo",
+            "Lesão por Inalação",
+            "Dispnéia Aguda",
+            "Mecanismo de Trauma Significativo",
             "Alteração Súbita da Consciência",
-            "Sat 02 muito baixa",
+            "Sat 02 Muito Baixa",
             "Dor Intensa"
         ],
         "amarelo": [
             "Sat 02 baixa",
-            "Inalação de fumaça",
+            "Inalação de Fumaça",
             "História Discordante",
-            "Queimadura elétrica",
-            "Queimadura química",
+            "Queimadura Elétrica",
+            "Queimadura Química",
             "Dor Moderada"
         ],
         "verde": [
@@ -1380,17 +1384,17 @@ var lista_sintomas = [
         ],
         "laranja": [
             "Alteração Súbita da Consciência",
-            "Sangramento vaginal, > 20 semanas de gravidez",
-            "Sangramento vaginal intenso",
+            "Sangramento Vaginal, > 20 Semanas de Gravidez",
+            "Sangramento vaginal Intenso",
             "Dor Intensa"
         ],
         "amarelo": [
-            "Dor abdominal",
-            "Dor Irradiada para ombro",
-            "Trauma vaginal",
-            "Distúrbio de coagulação",
-            "História discordante",
-            "Gravidez possível",
+            "Dor Abdominal",
+            "Dor Irradiada para Ombro",
+            "Trauma Vaginal",
+            "Distúrbio de Coagulação",
+            "História Discordante",
+            "Gravidez Possível",
             "Dor Moderada"
         ],
         "verde": [
@@ -1407,7 +1411,7 @@ var lista_sintomas = [
             "Choque",
             "Criança Não Reativa",
             "Convulsionando",
-            "Hipogrlicemia"
+            "Hipoglicemia"
         ],
         "laranja": [
             "Mecanismo de Trauma Significativo",
@@ -1451,7 +1455,7 @@ var lista_sintomas = [
         "amarelo": [
             "Hemorragia Menor Incontrolável",
             "História de Inconsciência",
-            "Comorbidade importante",
+            "Comorbidade Importante",
             "Distúrbio de Coagulação",
             "Dor Moderada"
         ],
@@ -1466,14 +1470,14 @@ var lista_sintomas = [
             "Choque",
         ],
         "laranja": [
-            "Dispinéia aguda",
+            "Dispinéia Aguda",
             "Hemorragia Maior Incontrolável",
             "Mecanismo de Trauma Significativo",
             "Evisceração",
             "Dor Intensa"
         ],
         "amarelo": [
-            "Dor pleuritica",
+            "Dor Pleuritica",
             "Hemorragia Menor Incontrolável",
             "Distúrbio de Coagulação",
             "História Discordante",

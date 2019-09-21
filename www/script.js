@@ -55,7 +55,7 @@ function iniciar() {
 
 }
 function cadastrar() {
-    googleDrive.uploadFile( function(success) { alert("All file has been successfully uploaded"); }, function(error) { alert("Something went wrong. Please try again..."); }, filePath);
+    // googleDrive.uploadFile( function(success) { alert("All file has been successfully uploaded"); }, function(error) { alert("Something went wrong. Please try again..."); }, filePath);
     var data_hora = $('input[type="datetime-local"]').val()
     var dia = data_hora.substring(8,10)
     var mes = data_hora.substring(5,7)
