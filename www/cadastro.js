@@ -4,6 +4,7 @@ Vue.component('cadastro',{
    template: 
    `<form id="form-cad" onsubmit="cadastrar()" action="classificacao.html" class="jumbotron formulario">
    <hr>
+
    <div class="input-group mb-3 col-lg-">
    <div class="input-group-prepend">
    <span class="input-group-text oi oi-person"></span>
@@ -12,8 +13,9 @@ Vue.component('cadastro',{
    <input id="cadastro-cor-paciente" type="hidden" class="form-control" required="true" value="vermelho">
    </div>
 
-   <div class="row">
-   <div class="col-md-6">
+   <div>
+   <div v-bind:class="{'row': innerWidth<900}">
+   <div class="col-md-6" v-bind:class="{'esquerda': innerWidth>900}">
    <div class="input-group mb-3">
    <div class="input-group-prepend">
    <span class="input-group-text oi oi-person"></span>
@@ -27,9 +29,9 @@ Vue.component('cadastro',{
    </div>
    </div>
 
-   <div class="row">
+   <div v-bind:class="{'row': innerWidth<900}">
 
-   <div class="col-md-6">
+   <div class="col-md-6"  v-bind:class="{'direita': innerWidth>900}">
    <div class="input-group mb-3">
    <div class="input-group-prepend">
    <span class="input-group-text oi oi-home"></span>
@@ -43,7 +45,7 @@ Vue.component('cadastro',{
    </div>
    </div>
 
-   <div class="col-md-6">
+   <div class="col-md-6"   v-bind:class="{'esquerda': innerWidth>900}">
    <div class="input-group mb-3">
    <div class="input-group-prepend">
    <span class="input-group-text oi oi-eyedropper"></span>
@@ -54,10 +56,11 @@ Vue.component('cadastro',{
    </select>
    </div>  
    </div>
+   </div>
 
    </div>
    <div class="row">
-   <div class='col col-sm'>
+   <div class='col col-sm'  v-bind:class="{'direita': innerWidth>900}">
    <div class="form-group">
    <div class='input-group date' id='datahora-inicio'>
    <div class="input-group mb-2">

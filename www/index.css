@@ -4,3 +4,14 @@
 	left: 10%;
 	bottom: 5%;
 }
+
+@media only screen and (min-width: 900px){
+	#btInicial{       
+		margin-top: 0% !important;
+	}
+	#btContainer {
+		width: 20% !important;
+		left: 40%;
+	}
+	
+}

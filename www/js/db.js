@@ -9,7 +9,7 @@ db.transaction(populateDB, errorCB, successCB);
 try {
     db.transaction(queryConsultaDB, errorCB);    
 } catch (e) {
-    console.log(e)
+    // console.log(e)
 }
 
 function errorInserirRegistroCB(err) {
@@ -69,7 +69,7 @@ function querySuccess(tx, results) {
     else if (location.href.indexOf('registros.html')!=-1){     
         var id =  localStorage.getItem('consulta-id')
         var mes = localStorage.getItem('consulta-mes')
-        console.log(consultas[mes])
+        // console.log(consultas[mes])
         for (var i = 0; i < consultas[mes].dias.length; i++) {
             if(consultas[mes].dias[i].id == id){ 
                 consulta = consultas[mes].dias[i]
@@ -77,13 +77,13 @@ function querySuccess(tx, results) {
             } 
         }
         if(id && mes){
-            console.log('id e mes')
+            // console.log('id e mes')
             listar_registro()
         }else if(mes){    
-            console.log('mes apenas')
+            // console.log('mes apenas')
             mes = Number(mes)            
             consulta = consultas[mes].dias[0]
-            console.log(consultas[mes].dias.length)            
+            // console.log(consultas[mes].dias.length)            
             listar_registro(consultas[mes])            
         }
     }
@@ -111,7 +111,7 @@ function errorCB(tx, err) {
     console.log("erroCB " + err)
 }
 function sucesso() {
-    console.log('sucesso')
+    // console.log('sucesso')
 }
 // Transaction success callback
 //
