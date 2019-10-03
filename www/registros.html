@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="styles.css" rel="stylesheet">
     <link href="teste.css" rel="stylesheet">
+    <link href="css/registros.css" rel="stylesheet">
     <link href="relatorio.css" rel="stylesheet">
     <link href="css/titulo-container.css" rel="stylesheet">
     <!-- ÍCONES -->
@@ -20,16 +21,16 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
 </head>
-<body>
+<body id="app">
     <div id="registros">
         <div id="titulo-container">            
             <titulo-container v-bind:titulo="titulo" filho="false" ></titulo-container>
         </div>
         <div id="cont" class="row">            
-            <div id="main" class="col-12 col-sm-12 col-md-8">
+            <div id="main" class="col-12 col-sm-12 col-md-8 lista_registros_desktop">
                 <div id="scroller" class="row vertical-center">
                     <div class="row" id="button">
-                        <div  v-for="consulta in consultas" class="row"  style="width: -webkit-fill-available;">
+                        <div  v-for="consulta in consultas" class="row consulta"  style="width: -webkit-fill-available;">
                             <div class="card">
                                 <div  class="card-header col-12" id="headingOne">
                                     <h3>Dia: {{consulta.dia}}/{{consulta.mes}}/{{consulta.ano}}</h3>

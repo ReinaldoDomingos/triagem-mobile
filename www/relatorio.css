@@ -1,5 +1,8 @@
 #main{
-	overflow-x: hidden;
+	overflow: auto !important;
+	overflow-x: hidden !important;
+	height: -webkit-fill-available !important;
+	max-height: -webkit-fill-available !important;
 }
 #main #button{
 	top: 10%;

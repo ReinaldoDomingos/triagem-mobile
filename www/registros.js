@@ -30,6 +30,13 @@ function listar_registro(mes){
 
 	}
 });
+	var cadastro = new Vue({
+		el: '#app',
+		data:{
+		}
+	});
+
+
 	var imported = document.createElement('script');
 	imported.src = 'titulo-container.js';
 	document.head.appendChild(imported); 

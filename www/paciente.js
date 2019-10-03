@@ -1,7 +1,7 @@
 Vue.component('paciente-dados',{
     props:{},
     template: 
-    `<div class="paciente alert alert-dark dados-paciente" role="alert">
+    `<div id="paciente" class="paciente alert alert-dark dados-paciente" role="alert">
     <p class="info-paciente lead">
     <p class="text-center"> <span id="nome-paciente"> {{paciente.nome}}</span> <br> <span id="sexo-paciente">{{paciente.sexo}}</span> - <span id="idade-paciente">{{paciente.idade}}</span> ano(s)
     </p>

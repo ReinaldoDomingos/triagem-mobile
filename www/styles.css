@@ -1,4 +1,39 @@
+#button{
+    padding-bottom: 20% !important;
+}
 @media only screen and (min-width: 900px){
+    #button{
+        padding-bottom: 10% !important;
+    }
+}
+
+.card-header{
+    padding: 1.25rem !important;
+}
+.consulta, .meses{
+    margin-bottom: 1% !important;
+}
+@media only screen and (min-width: 900px){
+    .consulta{  
+        width: 49% !important;/*Retirar para registro usar largura toda*/
+    }
+    .consulta .card{
+        width: -webkit-fill-available !important;/*Retirar para registro usar largura toda*/
+    }
+    .consulta td{
+        padding-left: 20%;
+        /*width: -webkit-fill-available !important;*/
+    }
+    .lista_registros_desktop{
+        max-width: -webkit-fill-available !important;
+        max-height: 90%;
+        overflow: auto !important;
+        /*width: 50% !important;*/
+        width: -webkit-fill-available !important;
+        position: absolute !important;
+        margin: auto !important;
+
+    }
     #btDownload{
         position: fixed; 
         right: 10%;
@@ -176,10 +211,11 @@ form{
 .bts{
     max-width:90.25%;
     max-width:90.25%;
-    margin-left:4.75%;
     overflow: auto;
     max-height: 60vh;
+    margin-left:4.75% !important;
 }
+
 .col-md-8{
     padding:1% !important;
     height:90vh;
