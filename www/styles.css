@@ -1,3 +1,6 @@
+img{
+    display: none !important;
+}
 #button{
     padding-bottom: 20% !important;
 }
@@ -22,7 +25,8 @@
     }
     .consulta td{
         padding-left: 20%;
-        /*width: -webkit-fill-available !important;*/
+        min-width: -webkit-fill-available !important;
+        width: 100% !important;
     }
     .lista_registros_desktop{
         max-width: -webkit-fill-available !important;
@@ -307,6 +311,7 @@ h2 {
 }
 
 .logo-ufms {
+    display: block !important;
     float: left;
     margin-left: 10px;
     width: 50%;
@@ -314,6 +319,7 @@ h2 {
 }
 
 .logo-talentw {
+    display: block !important;
     width: 40%;
     float: right;
     margin-left: 0;

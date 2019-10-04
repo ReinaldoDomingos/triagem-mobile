@@ -1,3 +1,16 @@
+.doenca:hover, .doenca:focus, .doenca:active {
+	border: none;
+	background-color: transparent !important;
+	border-color: transparent !important;
+
+	/*remove retangulo azul quando button selecionado*/
+	outline: 0px auto -webkit-focus-ring-color !important;
+	outline-offset: 0px !important;
+
+	/*remove efeito de profundidade quando button clicado*/
+	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0);
+	box-shadow: inset 0 3px 5px rgba(0,0,0,0);
+}
 #main{
 	overflow: auto !important;
 	overflow-x: hidden !important;
@@ -21,4 +34,18 @@
 }
 .cinza button{
 	background: #d6d8d9;
+}
+.meses{
+	width: -webkit-fill-available;
+}
+@media only screen and (min-width: 900px){
+	#main{
+		min-width: 100%;
+		margin-left: 7.5%;
+	}
+	.meses{
+		width: 30%;
+		float: left;
+		margin: 0;
+	}
 }

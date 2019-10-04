@@ -26,7 +26,7 @@
                 <div id="main" class="col-12 col-sm-12 col-md-8">
                 <div id="scroller" class="row vertical-center">
                     <div class="row" id="button" v-show="meses">
-                        <div v-for="(mes,index) in meses" v-if="mes.dias.length"  class="row meses" v-bind:key="index" style="width: -webkit-fill-available;" v-model="messes">
+                        <div v-for="(mes,index) in meses" v-if="mes.dias.length"  class="row meses" v-bind:key="index" v-model="messes">
                             <div class="card">
                                 <div class="card-header col-12" id="headingOne">
                                     <button-container v-bind:titulo="mes.nome" v-bind:chave="mes.id" filho="false" icone="true" data-toggle="collapse"  aria-expanded="true"  aria-controls="collapseOne"  v-bind:mess="mes.id">                     

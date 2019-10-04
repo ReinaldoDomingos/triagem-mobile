@@ -154,11 +154,15 @@ updated(){
 
 });
 function getMaiorAltura(){
-        var s = document.getElementsByClassName('sintoma').length
-        var maior = 0; ;
-        for (var i = 0; i < s; i++) {
+        if(innerWidth < 900){
+          var s = document.getElementsByClassName('sintoma').length
+          var maior = 0; ;
+          for (var i = 0; i < s; i++) {
                 var h = document.getElementsByClassName('sintoma')[i].clientHeight
                 if (h > maior) maior = h;
         }
         $('.sintoma').css('height', maior * 0.95);
+}else{
+        $('.sintoma').css('height', '47.5px');
+}
 }

@@ -43,9 +43,9 @@ function listar_registro(mes){
 }
 function exportar(){	
 	var s = '';
-	s+='<h1>			Relatório Mensal de Classificação</h1> <br>';
+	s+='<h1>			Relatório Mensal de Classificação</h1> <br><br>';
 	for(var i =0; i<lista_mes.dias.length;i++){
-		s+='<h1>Data: '+lista_mes.dias[i].dia +'/'+lista_mes.dias[i].mes+'/'+lista_mes.dias[i].ano + '</h1>';
+		s+='<h1>Data: '+lista_mes.dias[i].dia +'/'+lista_mes.dias[i].mes+'/'+lista_mes.dias[i].ano + '</h1><br>';
 		var cor = lista_mes.dias[i].cor
 		s+="<b>		Cor:</b> "+cor.replace(cor.charAt(0),cor.charAt(0).toUpperCase()) + '<br>';
 		s+="<b>		Sexo:</b> "+lista_mes.dias[i].sexo + '<br>';
@@ -71,10 +71,35 @@ function exportar(){
 		documentSize: 'A4',
 		type: 'share'
 	}
-
-	pdf.fromData( '<html>'+s+'</html>', options)
+	if(innerWidth<900){
+		pdf.fromData( '<html>'+s+'</html>', options)
     .then((stats)=> console.log('status', stats) )   // ok..., ok if it was able to handle the file to the OS.  
     .catch((err)=>console.err(err))
+}else{
+	var doc = new jsPDF()
+	var l = 10
+	var c = 10
+	var registros = (s.split('<br><br>'))
+	doc.text('			Relatório Mensal de Classificação',l,c)
+	c+=10
+	for (var i = 1; i < registros.length-1; i++) {
+		var registro = registros[i].split('<br>')
+		for (var j = 0; j < registro.length; j++) {
+			doc.text((registro[j].replace('<b>		','').replace('<h1>','').replace('</h1>','').replace('</b>','')),l,c)
+			c+= 10
+			if(c>=300) {
+				doc.addPage() 
+				c = 10
+			}
+		}
+		c+= 10
+		c+= 10
+		if(c>=300) {
+			doc.addPage() 
+			c = 10
+		}				
+	}
 
-
+	doc.save('registros.pdf')
+}
 }

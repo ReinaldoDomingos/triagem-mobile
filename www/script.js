@@ -1,12 +1,13 @@
 $(function () {
     var altura = screen.height
     var largura = screen.width
-    if(location.href.indexOf('index.htm')!=-1){
+    if(location.href.indexOf('index.htm')!=-1 || location.href.indexOf('html')==-1){
         var  w = ($('#btInicial').css('height'))
         var total = Number(w.substring(0,w.length-2));
         var l = ((100 - parseInt(total/innerWidth * 100))/2)
         $('#btInicial').css('width',w)
         .css('left',l + '%')
+        console.log(l)
     }
     if (altura >= 570) {
         $('#app').hide()

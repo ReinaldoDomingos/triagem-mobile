@@ -2,4 +2,7 @@
 	#paciente{
 		margin-left:4.75% !important;
 	}
+	.esconde-barra{
+		overflow: hidden;
+	}
 }
