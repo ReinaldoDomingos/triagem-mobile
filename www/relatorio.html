@@ -9,6 +9,8 @@
     <link href="styles.css" rel="stylesheet">
     <link href="teste.css" rel="stylesheet">
     <link href="relatorio.css" rel="stylesheet">
+    <link href="css/titulo-container.css" rel="stylesheet">
+
     <!-- ÍCONES -->
     <link href="assets/libs/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
     <!-- JQUERY -->
@@ -17,13 +19,15 @@
     <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
     <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <h2 class="display-4 titulo">Por Mês</h2>
+        <div id="titulo-container">            
+            <titulo-container titulo="Por Mês"></titulo-container>
+        </div>
         <div id="cont" class="row">
-                <div id="main" class="col-12 col-sm-12 col-md-8">
+            <div id="main" class="col-12 col-sm-12 col-md-8">
                 <div id="scroller" class="row vertical-center">
                     <div class="row" id="button" v-show="meses">
                         <div v-for="(mes,index) in meses" v-if="mes.dias.length"  class="row meses" v-bind:key="index" v-model="messes">
@@ -50,7 +54,6 @@
     <script src="assets/libs/vue/vue.js"></script>                      
     <script src="script.js"></script>
     <script src="relatorio.js"></script>
-    <!-- <script src="js/button-container.js"></script>     -->
     <script src="cordova.js"></script>
     <script src="js/index.js"></script>  
 </body>

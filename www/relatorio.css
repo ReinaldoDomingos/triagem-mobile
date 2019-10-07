@@ -1,3 +1,6 @@
+#btExportar{
+	display: none;
+}
 .doenca:hover, .doenca:focus, .doenca:active {
 	border: none;
 	background-color: transparent !important;
@@ -17,11 +20,7 @@
 	height: -webkit-fill-available !important;
 	max-height: -webkit-fill-available !important;
 }
-#main #button{
-	top: 10%;
-	position: absolute;
-	width: -webkit-fill-available;
-}
+
 #headingOne{
 	padding: 0;
 }

@@ -1,3 +1,8 @@
+#main #button{
+    top: 5%;
+    position: absolute;
+    width: -webkit-fill-available;
+}
 img{
     display: none !important;
 }
@@ -281,8 +286,7 @@ body {
 }
 
 .vertical-center {
-    min-height: 100%;
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     align-items: center;
     margin-top: 0 !important;

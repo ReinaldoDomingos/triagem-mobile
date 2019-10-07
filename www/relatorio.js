@@ -33,4 +33,7 @@ function listar_registros(){
 	var imported = document.createElement('script');
 	imported.src = 'js/button-container.js';
 	document.head.appendChild(imported); 
+	var imported = document.createElement('script');
+	imported.src = 'titulo-container.js';
+	document.head.appendChild(imported); 
 }

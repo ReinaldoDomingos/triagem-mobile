@@ -1,13 +1,11 @@
+.alert{
+	margin: 0 !important;
+}
 .titulo-container{
 	padding: 2% !important;	
 }
 #main{
 	overflow-x: hidden;
-}
-#main #button{
-	top: 10%;
-	position: absolute;
-	width: -webkit-fill-available;
 }
 #headingOne{
 	padding: 0;
