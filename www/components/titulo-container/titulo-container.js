@@ -2,7 +2,7 @@ Vue.component('titulo-container',{
     props:['titulo'],
     template: 
     `<div class="paciente alert alert-dark dados-paciente titulo-container" role="alert">
-    <span style="float: left;" @click="voltar()"> <i id="btDownload" class='material-icons'>arrow_back</i></span>
+    <span style="float: left;" @click="voltar()"> <i  class='material-icons'>arrow_back</i></span>
     <h1 id="titulo">{{titulo}}
     
     <span id="btExportar" style="float: right;" onclick="exportar()"> <i id="btDownload" class='material-icons'>save_alt</i></span>
