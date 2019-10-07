@@ -56,7 +56,7 @@ var app = new Vue({
                         if (location.href.indexOf('cadastro.html') != - 1)
                                 location.href = 'index.html'
                         else if (location.href.indexOf('classificacao.html') != - 1)
-                                location.href = 'cadastro.html#review'
+                                location.href = '../../cadastro.html#review'
                         else
                                 window.history.back();
                 },

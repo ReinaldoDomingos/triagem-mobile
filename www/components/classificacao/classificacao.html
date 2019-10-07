@@ -6,17 +6,17 @@
     <base href="./">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="assets/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="styles.css" rel="stylesheet">
-    <link href="teste.css" rel="stylesheet">
-    <link href="css/classificacao.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="../../styles.css" rel="stylesheet">
+    <link href="../../teste.css" rel="stylesheet">
+    <link href="classificacao.css" rel="stylesheet">
     <!-- ÍCONES -->
-    <link href="assets/libs/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+    <link href="../../assets/libs/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
     <!-- JQUERY -->
-    <script src="assets/libs/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../../assets/libs/jquery/jquery-3.3.1.min.js"></script>
     <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
-    <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../assets/libs/bootstrap/css/bootstrap.min.css">
+    <script src="../../assets/libs/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div id="classificacao">
@@ -37,7 +37,7 @@
                                 <div id="sintomas_box" class="bts" v-bind:class="{'esconde-barra': !sintoma}">
                                     <button class="btn btn-light doenca" routerLink="/sintomas/" @click="prev"  v-if="minItem > 2 && !sintoma">⇦</button>
                                     <button v-for="(doenca,index) in filtrado" v-if="doencas && doencas.length > 0 && index <= maxItem && index>= minItem-1" type="button" class="btn btn-light doenca" routerLink="/sintomas/" v-bind:index=index @click="selecionarSintoma(index,doenca)">{{doenca}}</button>
-                                    <button class="btn btn-light doenca" @click="prox" routerLink="/sintomas/"  v-if="maxItem < 50 && !sintoma">➱</button>
+                                    <button class="btn btn-light doenca" @click="prox" v-if="maxItem < 50 && !sintoma">➱</button>
                                 </div>
                                 <div class="botoes">                  
                                     <div class="row dcancelar">
@@ -51,8 +51,8 @@
             </div>
         </div>
     </div>
-    <script src="assets/libs/vue/vue.js"></script>
-    <script src="paciente.js"></script>
+    <script src="../../assets/libs/vue/vue.js"></script>
+    <script src="../../paciente.js"></script>
     <script src="classificacao.js"></script>
 </body>
 </html>

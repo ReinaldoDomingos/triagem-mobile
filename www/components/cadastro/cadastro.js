@@ -2,7 +2,7 @@ Vue.component('cadastro',{
    props:{
    },
    template: 
-   `<form id="form-cad" onsubmit="cadastrar()" action="classificacao.html" class="jumbotron formulario">
+   `<form id="form-cad" onsubmit="cadastrar()" action="components/classificacao/classificacao.html" class="jumbotron formulario">
    <hr>
 
    <div class="input-group mb-3 col-lg-">
@@ -273,10 +273,10 @@ Vue.component('cadastro',{
          return d.toLocaleTimeString().substring(0,5)
       },
       voltar: function(){
-         if(location.href.indexOf('cadastro.html')!=-1)
+         if(location.href.indexOf('components/cadastro/cadastro.html')!=-1)
             location.href = 'index.html'
          else if(location.href.indexOf('classificacao.html')!=-1)
-            location.href = 'cadastro.html#review'
+            location.href = 'components/cadastro/cadastro.html#review'
          else
             window.history.back();
       },
