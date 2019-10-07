@@ -22,7 +22,7 @@ Vue.component('button-container',{
 				localStorage.setItem('consulta-mes', this.mess)			
 				localStorage.setItem('consulta-id', '')		
 				console.log(consultas[this.mess].dias)	
-				window.location.href = 'registros.html';
+				window.location.href = '../../registros.html';
 			}else if(location.href.indexOf('registros.html')!=-1){
 				var doc = new jsPDF('landscape');
 				doc.addHTML(
@@ -65,7 +65,7 @@ Vue.component('button-container',{
 			}else{								
 				localStorage.setItem('consulta-id', this.id)
 				localStorage.setItem('consulta-mes', this.mess)
-				location.href = "registros.html"						
+				location.href = "../../registros.html"						
 			}
 		}
 	},
