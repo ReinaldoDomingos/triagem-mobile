@@ -38,7 +38,7 @@ function listar_registro(mes){
 
 
 	var imported = document.createElement('script');
-	imported.src = 'components/titulo-container/titulo-container.js';
+	imported.src = '../titulo-container/titulo-container.js';
 	document.head.appendChild(imported); 
 }
 function exportar(){	

@@ -17,7 +17,7 @@ Vue.component('titulo-container',{
         voltar(){
             let paginaAtual = location.href;
             console.log(paginaAtual)
-            if(paginaAtual.indexOf('registros.html')!= -1) location.href = 'components/relatorio/relatorio.html'
+            if(paginaAtual.indexOf('registros.html')!= -1) location.href = '../relatorio/relatorio.html'
            else if(paginaAtual.indexOf('relatorio.html')!= -1) location.href = '../../index.html'
         }
 }
