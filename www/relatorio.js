@@ -34,6 +34,6 @@ function listar_registros(){
 	imported.src = 'components/button-container/button-container.js';
 	document.head.appendChild(imported); 
 	var imported = document.createElement('script');
-	imported.src = 'titulo-container.js';
+	imported.src = 'components/titulo-container/titulo-container.js';
 	document.head.appendChild(imported); 
 }
