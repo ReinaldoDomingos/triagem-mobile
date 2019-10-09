@@ -27,7 +27,10 @@ function listar_registro(mes){
 			}
 	},
 	methods:{
-
+		apagarRegistro(id){
+			console.log(id)
+			apagar(id)
+		}
 	}
 });
 	var cadastro = new Vue({

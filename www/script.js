@@ -7,7 +7,6 @@ $(function () {
         var l = ((100 - parseInt(total/innerWidth * 100))/2)
         $('#btInicial').css('width',w)
         .css('left',l + '%')
-        console.log(l)
     }
     if (altura >= 570) {
         $('#app').hide()

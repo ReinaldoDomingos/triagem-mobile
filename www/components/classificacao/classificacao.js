@@ -63,7 +63,7 @@ var app = new Vue({
                 selecionarSintoma(id, sintoma){
                         localStorage.setItem('sintoma-id', id)
                         localStorage.setItem('sintoma-sintoma', sintoma)
-                        location.href = 'sintoma.html#review'
+                        location.href = '../sintoma/sintoma.html#review'
                 },
                 ajustarTamanhoBarraPesquisa(){
                         var s = document.getElementsByClassName('doenca').length

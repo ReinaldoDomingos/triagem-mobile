@@ -29,10 +29,12 @@
             <div id="main" class="col-12 col-sm-12 col-md-8 lista_registros_desktop">
                 <div id="scroller" class="row vertical-center">
                     <div class="row" id="button">
-                        <div  v-for="consulta in consultas" class="row consulta"  style="width: -webkit-fill-available;">
+                        <div  v-for="consulta in consultas" class="row consulta">
                             <div class="card">
                                 <div  class="card-header col-12" id="headingOne">
-                                    <h3>Dia: {{consulta.dia}}/{{consulta.mes}}/{{consulta.ano}}</h3>
+                                    <div class="row registro-titulo">
+                                        <h3>Dia: {{consulta.dia}}/{{consulta.mes}}/{{consulta.ano}}</h3><span><i id="btDelete" class='material-icons' v-on:click="apagarRegistro(consulta.id)">delete</i></span>
+                                    </div>
                                     <div  class="collapse show dias" aria-labelledby="headingOne" data-parent="#accordionExample">
                                         <div class="card-body">
                                             <table> 

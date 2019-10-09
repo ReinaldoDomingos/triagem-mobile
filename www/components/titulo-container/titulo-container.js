@@ -5,7 +5,7 @@ Vue.component('titulo-container',{
     <span style="float: left;" @click="voltar()"> <i  class='material-icons'>arrow_back</i></span>
     <h1 id="titulo">{{titulo}}
     
-    <span id="btExportar" style="float: right;" onclick="exportar()"> <i id="btDownload" class='material-icons'>save_alt</i></span>
+    <span id="btExportar" style="float: right;" > <i id="btDownload" class='material-icons' onclick="exportar()">save_alt</i></span>
     </h1>
     </div>`,
     data(){
@@ -18,9 +18,9 @@ Vue.component('titulo-container',{
             let paginaAtual = location.href;
             console.log(paginaAtual)
             if(paginaAtual.indexOf('registros.html')!= -1) location.href = '../relatorio/relatorio.html'
-           else if(paginaAtual.indexOf('relatorio.html')!= -1) location.href = '../../index.html'
-        }
-}
+               else if(paginaAtual.indexOf('relatorio.html')!= -1) location.href = '../../index.html'
+           }
+   }
 });
 
 var cadastro = new Vue({

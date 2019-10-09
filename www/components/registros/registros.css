@@ -1,0 +1,10 @@
+.consulta{
+	width: -webkit-fill-available;
+}
+.registro-titulo{
+	padding: 1rem;
+}
+
+.registro-titulo h3{
+	width: 90%;
+}

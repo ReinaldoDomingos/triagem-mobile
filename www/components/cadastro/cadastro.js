@@ -273,7 +273,7 @@ Vue.component('cadastro',{
          return d.toLocaleTimeString().substring(0,5)
       },
       voltar: function(){
-         if(location.href.indexOf('components/cadastro/cadastro.html')!=-1)
+         if(location.href.indexOf('cadastro.html')!=-1)
             location.href = 'index.html'
          else if(location.href.indexOf('classificacao.html')!=-1)
             location.href = 'components/cadastro/cadastro.html#review'

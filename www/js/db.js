@@ -25,7 +25,8 @@ var id = 0;
  * Reultilizado by Reinaldo Junior on 18/09/2019
  */
  function deletarDB(tx) {
-    tx.executeSql('DELETE FROM registroanimal WHERE id =' + this.id);
+    tx.executeSql('DELETE FROM consultas WHERE id =' + this.id);
+    location.href = 'registros.html'
 }
 function populateDB(tx) {
     tx.executeSql('CREATE TABLE IF NOT EXISTS consultas (id INTEGER PRIMARY KEY AUTOINCREMENT, nome, sexo, idade, '
@@ -101,7 +102,7 @@ function queryConsultaSuccess(tx, results) {
 
 function apagar(id) {
     this.id = id;
-    db.transaction(deletarDB, errorCB);
+    db.transaction(deletarDB, errorCB);    
 //    id = this.id;
 }
 
