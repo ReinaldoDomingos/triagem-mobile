@@ -14,7 +14,9 @@
   "license": "Apache-2.0",
   "dependencies": {
     "cordova-android": "^8.0.0",
+    "cordova-browser": "^6.0.0",
     "cordova-pdf-generator": "^2.0.8",
+    "cordova-plugin-deeplinks": "^1.1.1",
     "cordova-plugin-email-composer": "git+https://github.com/katzer/cordova-plugin-email-composer.git",
     "cordova-plugin-file": "^6.0.2",
     "cordova-plugin-file-transfer": "^1.7.1",
@@ -31,10 +33,12 @@
         "ANDROID_SUPPORT_V4_VERSION": "27.+"
       },
       "cordova-plugin-file": {},
-      "cordova-pdf-generator": {}
+      "cordova-pdf-generator": {},
+      "cordova-plugin-deeplinks": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "browser"
     ]
   }
 }
