@@ -20,11 +20,6 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
-        <universal-links>
-            <host name="talentw.com">
-                <path url="/some/path" />
-            </host>
-        </universal-links>
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
